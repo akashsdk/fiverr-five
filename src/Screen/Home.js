@@ -3,6 +3,6 @@ import './Home.css';
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <div style={{height:'1000px', }}>Home</div>
   )
 }
