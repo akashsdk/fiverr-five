@@ -1,18 +1,15 @@
 import React from "react";
-import "./Home.css";
+import "./Categories.css";
 
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import SliderScreen from "../OtherScreen/SliderScreen";
 
-export default function Home() {
+export default function Categories() {
   return (
     <div className="body">
       <Header />
       <div className="box">
-        <SliderScreen />
-        <p>Home</p>
-        <div style={{ height: "1000px" }}>jj</div>
+        <p>Categories</p>
         <Footer />
       </div>
     </div>

@@ -4,6 +4,16 @@
   background-color: black;
   color: #fff;
 }
+.body{
+  width: 100%;
+  height: auto;
+}
+.box{
+  width: 100%;
+  height: auto;
+  height: calc(100vh - 55px); 
+  overflow: auto;
+}
 
 .App-logo {
   height: 40vmin;

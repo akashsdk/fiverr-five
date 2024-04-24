@@ -1,0 +1,45 @@
+.HeaderBody {
+  height: 55px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.HeaderImg {
+  height: 33px;
+}
+
+.HeaderLink {
+  text-decoration: none;
+}
+
+.Header-Text1 {
+  font-size: 20px;
+  color: #fff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;
+  margin-top: -0px;
+}
+
+.HeaderLine {
+  height: 4px;
+  width: 25px;
+  margin-top: -20px;
+}
+
+.HeaderLine.red {
+  background-color: red;
+}
+
+.HeaderLeftBox {
+  flex: 3;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.HeaderRightBox {
+  flex: 3;
+  background-color: aquamarine;
+}
