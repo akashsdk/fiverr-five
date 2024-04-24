@@ -12,11 +12,11 @@
 
 .HeaderLink {
   text-decoration: none;
+  color: #fff;
 }
 
 .Header-Text1 {
   font-size: 20px;
-  color: #fff;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 700;
   margin-top: -0px;
@@ -41,5 +41,50 @@
 
 .HeaderRightBox {
   flex: 3;
-  background-color: aquamarine;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.HeaderIcon {
+  font-size: 25px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.HeaderDrawer {
+  color: #fff;
+}
+
+.HeaderDrawer-TopDiv {
+  height: 55px;
+  width: 400px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: black;
+  margin-top: -24px;
+  margin-left: -24px;
+}
+
+.HeaderLink2{
+  text-decoration: none;
+  color: #fff;
+  height: 45px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.HeaderLink2:hover{
+  color: #ff0000;
+}
+
+.HeaderIcon2{
+  font-size: 20px;
+}
+
+.Header-Text2{
+  font-size: 20px;
+  margin-left: 10px;
 }

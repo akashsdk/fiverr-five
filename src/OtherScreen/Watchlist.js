@@ -1,18 +1,15 @@
 import React from "react";
-import "./Home.css";
+import "./Watchlist.css";
 
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import SliderScreen from "../Others/SliderScreen";
 
-export default function Home() {
+export default function Watchlist() {
   return (
     <div className="body">
       <Header />
       <div className="box">
-        <SliderScreen />
-        <p>Home</p>
-        <div style={{ height: "1000px" }}>jj</div>
+        Watchlist
         <Footer />
       </div>
     </div>
