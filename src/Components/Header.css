@@ -67,7 +67,7 @@
   margin-left: -24px;
 }
 
-.HeaderLink2{
+.HeaderLink2 {
   text-decoration: none;
   color: #fff;
   height: 45px;
@@ -76,15 +76,59 @@
   align-items: center;
 }
 
-.HeaderLink2:hover{
+.HeaderLink2:hover {
   color: #ff0000;
 }
 
-.HeaderIcon2{
+.HeaderIcon2 {
   font-size: 20px;
 }
 
-.Header-Text2{
+.Header-Text2 {
   font-size: 20px;
   margin-left: 10px;
+}
+
+.Header-Drawer-Box{
+  height: auto;
+  width: 400px;
+  background-color: black;
+  margin-top: -24px;
+  margin-left: -24px;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.Header-Drawer-Text3{
+  font-size: 20px;
+  opacity: .6;
+}
+
+.Header-Drawer-Line{
+  height: 1.5px;
+  background-color: #656060;
+  width: 88%;
+  margin-top: 10px;
+}
+
+.Header-Drawer-aTag{
+  height: 35px;
+  width: 35px;
+  border: 1.5px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 15px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.Header-Drawer-aTag:hover{
+  color: red;
+  border: 1.5px solid red;
+}
+
+.Header-Drawer-Icon{
+  font-size: 25px;
 }
