@@ -22,6 +22,8 @@ import {
 import { Drawer } from "antd";
 
 import HeaderLogo from "../Img/Header Logo.png";
+import Img1 from "../Img/App store logo.png";
+import Img2 from "../Img/play soter.png";
 
 export default function Header() {
   // Color Change
@@ -156,41 +158,59 @@ export default function Header() {
 
         <div className="Header-Drawer-Box">
           <p className="Header-Drawer-Text3">AVAILABLE ON:</p>
-          <div>
-            <button>Img</button>
-            <button>Img</button>
+          <div style={{ display: "flex" }}>
+            <button className="Header-Drawer-Button">
+              <img src={Img1} alt="" className="Header-Drawer-Img" />
+            </button>
+            <button className="Header-Drawer-Button">
+              <img src={Img2} alt="" className="Header-Drawer-Img2" />
+            </button>
           </div>
 
           <div className="Header-Drawer-Line" />
 
           <p className="Header-Drawer-Text3">FOLLOW US:</p>
-          <div style={{display:'flex'}}>
+          <div style={{ display: "flex" }}>
             <a href="" target="_blank" className="Header-Drawer-aTag">
-              <FacebookOutlined className="Header-Drawer-Icon"/>
+              <FacebookOutlined className="Header-Drawer-Icon" />
             </a>
 
             <a href="" target="_blank" className="Header-Drawer-aTag">
-              <TwitterOutlined className="Header-Drawer-Icon"/>
+              <TwitterOutlined className="Header-Drawer-Icon" />
             </a>
 
             <a href="" target="_blank" className="Header-Drawer-aTag">
-              <WhatsAppOutlined className="Header-Drawer-Icon"/>
+              <WhatsAppOutlined className="Header-Drawer-Icon" />
             </a>
 
             <a href="" target="_blank" className="Header-Drawer-aTag">
-              <YoutubeOutlined className="Header-Drawer-Icon"/>
+              <YoutubeOutlined className="Header-Drawer-Icon" />
             </a>
 
             <a href="" target="_blank" className="Header-Drawer-aTag">
-              <InstagramOutlined className="Header-Drawer-Icon"/>
+              <InstagramOutlined className="Header-Drawer-Icon" />
             </a>
 
             <a href="" target="_blank" className="Header-Drawer-aTag">
-              <LinkedinOutlined className="Header-Drawer-Icon"/>
+              <LinkedinOutlined className="Header-Drawer-Icon" />
             </a>
           </div>
 
           <div className="Header-Drawer-Line" />
+
+          <div style={{ display: "flex" }}>
+            <Link to="/about" className="HeaderLink3" onClick={onLink}>
+              <p className="Header-Drawer-Text4">.About Us</p>
+            </Link>
+
+            <Link to="/blog" className="HeaderLink3" onClick={onLink}>
+              <p className="Header-Drawer-Text4">.Blog</p>
+            </Link>
+
+            <Link to="/contacts" className="HeaderLink3" onClick={onLink}>
+              <p className="Header-Drawer-Text4">.Contacts</p>
+            </Link>
+          </div>
         </div>
       </Drawer>
     </div>

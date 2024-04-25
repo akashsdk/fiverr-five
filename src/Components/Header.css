@@ -89,7 +89,7 @@
   margin-left: 10px;
 }
 
-.Header-Drawer-Box{
+.Header-Drawer-Box {
   height: auto;
   width: 400px;
   background-color: black;
@@ -99,19 +99,19 @@
   padding: 20px;
 }
 
-.Header-Drawer-Text3{
+.Header-Drawer-Text3 {
   font-size: 20px;
-  opacity: .6;
+  opacity: 0.6;
 }
 
-.Header-Drawer-Line{
+.Header-Drawer-Line {
   height: 1.5px;
   background-color: #656060;
   width: 88%;
   margin-top: 10px;
 }
 
-.Header-Drawer-aTag{
+.Header-Drawer-aTag {
   height: 35px;
   width: 35px;
   border: 1.5px solid #fff;
@@ -124,11 +124,50 @@
   color: #fff;
 }
 
-.Header-Drawer-aTag:hover{
+.Header-Drawer-aTag:hover {
   color: red;
   border: 1.5px solid red;
 }
 
-.Header-Drawer-Icon{
+.Header-Drawer-Icon {
   font-size: 25px;
+}
+
+.Header-Drawer-Button {
+  height: 50px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  margin-right: 20px;
+  border: 1.5px solid #656060;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Header-Drawer-Img {
+  height: 48px;
+  width: 148px;
+}
+
+.Header-Drawer-Img2 {
+  height: 70px;
+  width: 170px;
+  border-radius: 10px;
+}
+
+.HeaderLink3{
+  text-decoration: none;
+  color: #fff;
+  opacity: .7;
+}
+
+.HeaderLink3:hover{
+  color: red;
+}
+
+.Header-Drawer-Text4{
+  text-transform: capitalize;
+  margin-right: 10px;
 }
