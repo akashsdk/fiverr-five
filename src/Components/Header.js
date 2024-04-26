@@ -18,6 +18,9 @@ import {
   YoutubeOutlined,
   InstagramOutlined,
   LinkedinOutlined,
+  FileSearchOutlined,
+  PlaySquareOutlined,
+  VideoCameraAddOutlined,
 } from "@ant-design/icons";
 import { Drawer } from "antd";
 
@@ -97,6 +100,38 @@ export default function Header() {
         >
           <p className="Header-Text1">Categories</p>
           <div className={`HeaderLine ${textColors[3]}`} />
+        </Link>
+      </div>
+
+      <div className="HeaderLeftBox2">
+        <Link to="/" onClick={() => handleTextClick(0)}>
+          <img src={HeaderLogo} className="HeaderImg" alt="Logo" />
+        </Link>
+
+        
+
+        <Link
+          to="/shows"
+          className="HeaderLink"
+          onClick={() => handleTextClick(1)}
+        >
+          <VideoCameraAddOutlined className="HeaderIcon"/>
+        </Link>
+
+        <Link
+          to="/movies"
+          className="HeaderLink"
+          onClick={() => handleTextClick(2)}
+        >
+          <PlaySquareOutlined className="HeaderIcon"/>
+        </Link>
+
+        <Link
+          to="/categories"
+          className="HeaderLink"
+          onClick={() => handleTextClick(3)}
+        >
+          <FileSearchOutlined  className="HeaderIcon"/>
         </Link>
       </div>
 
