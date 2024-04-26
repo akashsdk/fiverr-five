@@ -119,97 +119,102 @@ export default function Header() {
         open={open}
         key="right"
         className="HeaderDrawer"
-        style={{ backgroundColor: "rgb(55, 55, 55)" }}
+        style={{ backgroundColor: "black", }}
         width={400}
       >
-        <div className="HeaderDrawer-TopDiv">
-          <CloseOutlined onClick={onClose} className="HeaderIcon" />
-        </div>
-
-        <Link to="/settings" className="HeaderLink2" onClick={onLink}>
-          <SettingOutlined className="HeaderIcon2" />
-          <p className="Header-Text2">Setting</p>
-        </Link>
-
-        <Link to="/watchlist" className="HeaderLink2" onClick={onLink}>
-          <DesktopOutlined className="HeaderIcon2" />
-          <p className="Header-Text2">Watchlist</p>
-        </Link>
-
-        <Link to="/history" className="HeaderLink2" onClick={onLink}>
-          <HistoryOutlined className="HeaderIcon2" />
-          <p className="Header-Text2">History</p>
-        </Link>
-
-        <Link to="/profile" className="HeaderLink2" onClick={onLink}>
-          <UserOutlined className="HeaderIcon2" />
-          <p className="Header-Text2">Profile</p>
-        </Link>
-
-        <Link to="/about" className="HeaderLink2" onClick={onLink}>
-          <ContactsOutlined className="HeaderIcon2" />
-          <p className="Header-Text2">About Us</p>
-        </Link>
-
-        <Link to="/contacts" className="HeaderLink2" onClick={onLink}>
-          <CustomerServiceOutlined className="HeaderIcon2" />
-          <p className="Header-Text2">Contacts</p>
-        </Link>
-
-        <div className="Header-Drawer-Box">
-          <p className="Header-Drawer-Text3">AVAILABLE ON:</p>
-          <div style={{ display: "flex" }}>
-            <button className="Header-Drawer-Button">
-              <img src={Img1} alt="" className="Header-Drawer-Img" />
-            </button>
-            <button className="Header-Drawer-Button">
-              <img src={Img2} alt="" className="Header-Drawer-Img2" />
-            </button>
+        <div
+          
+        >
+          <div className="HeaderDrawer-TopDiv">
+            <CloseOutlined onClick={onClose} className="HeaderIcon" />
           </div>
 
-          <div className="Header-Drawer-Line" />
+          <div className="HeaderDrawer-Mid-Div">
+            <Link to="/settings" className="HeaderLink2" onClick={onLink}>
+              <SettingOutlined className="HeaderIcon2" />
+              <p className="Header-Text2">Setting</p>
+            </Link>
 
-          <p className="Header-Drawer-Text3">FOLLOW US:</p>
-          <div style={{ display: "flex" }}>
-            <a href="" target="_blank" className="Header-Drawer-aTag">
-              <FacebookOutlined className="Header-Drawer-Icon" />
-            </a>
+            <Link to="/watchlist" className="HeaderLink2" onClick={onLink}>
+              <DesktopOutlined className="HeaderIcon2" />
+              <p className="Header-Text2">Watchlist</p>
+            </Link>
 
-            <a href="" target="_blank" className="Header-Drawer-aTag">
-              <TwitterOutlined className="Header-Drawer-Icon" />
-            </a>
+            <Link to="/history" className="HeaderLink2" onClick={onLink}>
+              <HistoryOutlined className="HeaderIcon2" />
+              <p className="Header-Text2">History</p>
+            </Link>
 
-            <a href="" target="_blank" className="Header-Drawer-aTag">
-              <WhatsAppOutlined className="Header-Drawer-Icon" />
-            </a>
+            <Link to="/profile" className="HeaderLink2" onClick={onLink}>
+              <UserOutlined className="HeaderIcon2" />
+              <p className="Header-Text2">Profile</p>
+            </Link>
 
-            <a href="" target="_blank" className="Header-Drawer-aTag">
-              <YoutubeOutlined className="Header-Drawer-Icon" />
-            </a>
+            <Link to="/about" className="HeaderLink2" onClick={onLink}>
+              <ContactsOutlined className="HeaderIcon2" />
+              <p className="Header-Text2">About Us</p>
+            </Link>
 
-            <a href="" target="_blank" className="Header-Drawer-aTag">
-              <InstagramOutlined className="Header-Drawer-Icon" />
-            </a>
-
-            <a href="" target="_blank" className="Header-Drawer-aTag">
-              <LinkedinOutlined className="Header-Drawer-Icon" />
-            </a>
+            <Link to="/contacts" className="HeaderLink2" onClick={onLink}>
+              <CustomerServiceOutlined className="HeaderIcon2" />
+              <p className="Header-Text2">Contacts</p>
+            </Link>
           </div>
+          <div className="Header-Drawer-Box">
+            <p className="Header-Drawer-Text3">AVAILABLE ON:</p>
+            <div style={{ display: "flex" }}>
+              <button className="Header-Drawer-Button">
+                <img src={Img1} alt="" className="Header-Drawer-Img" />
+              </button>
+              <button className="Header-Drawer-Button">
+                <img src={Img2} alt="" className="Header-Drawer-Img2" />
+              </button>
+            </div>
 
-          <div className="Header-Drawer-Line" />
+            <div className="Header-Drawer-Line" />
 
-          <div style={{ display: "flex" }}>
-            <Link to="/about" className="HeaderLink3" onClick={onLink}>
-              <p className="Header-Drawer-Text4">.About Us</p>
-            </Link>
+            <p className="Header-Drawer-Text3">FOLLOW US:</p>
+            <div style={{ display: "flex" }}>
+              <a href="" target="_blank" className="Header-Drawer-aTag">
+                <FacebookOutlined className="Header-Drawer-Icon" />
+              </a>
 
-            <Link to="/blog" className="HeaderLink3" onClick={onLink}>
-              <p className="Header-Drawer-Text4">.Blog</p>
-            </Link>
+              <a href="" target="_blank" className="Header-Drawer-aTag">
+                <TwitterOutlined className="Header-Drawer-Icon" />
+              </a>
 
-            <Link to="/contacts" className="HeaderLink3" onClick={onLink}>
-              <p className="Header-Drawer-Text4">.Contacts</p>
-            </Link>
+              <a href="" target="_blank" className="Header-Drawer-aTag">
+                <WhatsAppOutlined className="Header-Drawer-Icon" />
+              </a>
+
+              <a href="" target="_blank" className="Header-Drawer-aTag">
+                <YoutubeOutlined className="Header-Drawer-Icon" />
+              </a>
+
+              <a href="" target="_blank" className="Header-Drawer-aTag">
+                <InstagramOutlined className="Header-Drawer-Icon" />
+              </a>
+
+              <a href="" target="_blank" className="Header-Drawer-aTag">
+                <LinkedinOutlined className="Header-Drawer-Icon" />
+              </a>
+            </div>
+
+            <div className="Header-Drawer-Line" />
+
+            <div style={{ display: "flex" }}>
+              <Link to="/about" className="HeaderLink3" onClick={onLink}>
+                <p className="Header-Drawer-Text4">.About Us</p>
+              </Link>
+
+              <Link to="/blog" className="HeaderLink3" onClick={onLink}>
+                <p className="Header-Drawer-Text4">.Blog</p>
+              </Link>
+
+              <Link to="/contacts" className="HeaderLink3" onClick={onLink}>
+                <p className="Header-Drawer-Text4">.Contacts</p>
+              </Link>
+            </div>
           </div>
         </div>
       </Drawer>
