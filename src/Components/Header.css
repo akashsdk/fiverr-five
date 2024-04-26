@@ -15,6 +15,10 @@
   color: #fff;
 }
 
+.HeaderLink:hover {
+  color: #bfbebe;
+}
+
 .Header-Text1 {
   font-size: 20px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;

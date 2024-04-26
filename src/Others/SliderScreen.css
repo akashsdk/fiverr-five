@@ -1,0 +1,48 @@
+.SliderScreen-Body{
+    height: 400px;
+    width: 100%;
+    
+}
+.SliderScreen-Img{
+    height: 399px;
+    width: 100%;
+}
+.SliderScreen-Div{
+    position: relative;
+    height: 399px;
+    width: 100%;
+    margin-top: -400px;
+}
+
+
+.SliderScreen-Body {
+    position: relative;
+    width: 100%;
+  }
+  
+  .SliderScreen-Img {
+    width: 100%;
+  }
+  
+  .SliderScreen-Buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .SliderScreen-Buttons button {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .SliderScreen-Buttons button.active {
+    background-color: red;
+  }
+  
