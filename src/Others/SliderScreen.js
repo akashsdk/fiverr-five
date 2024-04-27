@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./SliderScreen.css";
 
-import Img1 from '../Img/Karagar pster.jpeg';
-import Img2 from '../Img/maxresdefault.jpg';
-import Img3 from '../Img/Mobaroknama.jpg';
-import Img4 from '../Img/rumi-poster.webp';
+import Img1 from "../Img/Karagar pster.jpeg";
+import Img2 from "../Img/maxresdefault.jpg";
+import Img3 from "../Img/Mobaroknama.jpg";
+import Img4 from "../Img/rumi-poster.webp";
+import SliderButton from "../Components/SliderButton";
+
+import { CaretRightOutlined, PlusOutlined } from "@ant-design/icons";
+import { Tooltip } from 'antd';
 
 export default function SliderScreen() {
   const images = [Img1, Img2, Img3, Img4];
@@ -13,7 +17,7 @@ export default function SliderScreen() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change slide duration here (in milliseconds)
+    }, 5000);
 
     return () => clearInterval(intervalId);
   }, [images.length]);
@@ -36,19 +40,46 @@ export default function SliderScreen() {
 
   return (
     <div className="SliderScreen-Body">
-      <img alt="Poster" src={images[currentImageIndex]} className="SliderScreen-Img" />
+      <img
+        alt="Poster"
+        src={images[currentImageIndex]}
+        className="SliderScreen-Img"
+      />
       <div className="SliderScreen-Div">
-        <button onClick={goToPrevImage}>Left</button>
-        <button onClick={goToNextImage}>Right</button>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <SliderButton
+            iconPosition="left"
+            height="400px"
+            onClick={goToPrevImage}
+          />
+
+          <SliderButton
+            iconPosition="right"
+            height="400px"
+            onClick={goToNextImage}
+          />
+        </div>
+
+        <div className="SliderScreen-ButtonDiv">
+        <Tooltip title="Add to Watchlist">
+          <button className="SliderScreen-PlusButton">
+            <PlusOutlined />
+          </button>
+          </Tooltip>
+
+          <button className="SliderScreen-PlayButton">
+            <CaretRightOutlined /> Play Now
+          </button>
+        </div>
 
         <div className="SliderScreen-Buttons">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            className={currentImageIndex === index ? "active" : ""}
-            onClick={() => goToImage(index)}
-          ></button>
-        ))}
+          {images.map((_, index) => (
+            <button
+              key={index}
+              className={currentImageIndex === index ? "active" : ""}
+              onClick={() => goToImage(index)}
+            ></button>
+          ))}
         </div>
       </div>
     </div>

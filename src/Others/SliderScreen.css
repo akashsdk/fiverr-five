@@ -1,48 +1,78 @@
-.SliderScreen-Body{
-    height: 400px;
-    width: 100%;
-    
-}
-.SliderScreen-Img{
-    height: 399px;
-    width: 100%;
-}
-.SliderScreen-Div{
-    position: relative;
-    height: 399px;
-    width: 100%;
-    margin-top: -400px;
-}
-
-
 .SliderScreen-Body {
-    position: relative;
-    width: 100%;
-  }
-  
-  .SliderScreen-Img {
-    width: 100%;
-  }
-  
-  .SliderScreen-Buttons {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .SliderScreen-Buttons button {
-    width: 10px;
-    height: 10px;
-    border: none;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-    background-color: white;
-    transition: background-color 0.3s ease;
-  }
-  
-  .SliderScreen-Buttons button.active {
-    background-color: red;
-  }
-  
+  height: 400px;
+  width: 100%;
+}
+.SliderScreen-Img {
+  height: 399px;
+  width: 100%;
+}
+.SliderScreen-Div {
+  position: relative;
+  height: 399px;
+  width: 100%;
+  margin-top: -400px;
+}
+
+.SliderScreen-Buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.SliderScreen-Buttons button {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+
+.SliderScreen-Buttons button.active {
+  background-color: red;
+}
+
+.SliderScreen-ButtonDiv {
+  position: relative;
+  margin-top: -80px;
+  display: flex;
+  justify-content: flex-end;
+}
+.SliderScreen-PlusButton {
+  height: 50px;
+  width: 50px;
+  opacity: 0.8;
+  font-size: 30px;
+  background-color: transparent;
+  color: red;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  margin-right: 10px;
+}
+
+.SliderScreen-PlusButton:hover {
+  border: 2px solid red;
+}
+
+.SliderScreen-PlayButton {
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: red;
+  border: none;
+  box-shadow: rgba(255, 0, 0, 0.25) 0px 6px 12px -2px,
+    rgba(255, 0, 0, 0.3) 0px 3px 7px -3px;
+  opacity: 0.8;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.SliderScreen-PlayButton:hover {
+  opacity: 1;
+}

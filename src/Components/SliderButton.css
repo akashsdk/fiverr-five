@@ -1,0 +1,30 @@
+.slider-button {
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  opacity: 0.5;
+}
+
+.slider-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 100px 100px -12px inset;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1000px) {
+  .slider-button {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .slider-button {
+    font-size: 30px;
+  }
+}
