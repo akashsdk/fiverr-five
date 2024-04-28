@@ -25,14 +25,14 @@ import SliderButton from "../Components/SliderButton";
 
 export default function Home() {
   // Recently Added
-
   const containerRef = useRef(null);
+  const [scrollDirection, setScrollDirection] = useState("right");
 
   const scrollLeft = () => {
     const container = containerRef.current;
     container.scrollBy({
       top: 0,
-      left: -250, // Adjust scroll amount as needed
+      left: -250,
       behavior: "smooth",
     });
   };
@@ -41,17 +41,49 @@ export default function Home() {
     const container = containerRef.current;
     container.scrollBy({
       top: 0,
-      left: 250, // Adjust scroll amount as needed
+      left: 250,
       behavior: "smooth",
     });
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      scrollRight();
+      if (scrollDirection === "right") {
+        scrollRight();
+      } else {
+        scrollLeft();
+      }
     }, 5000);
 
     return () => clearInterval(interval);
+  }, [scrollDirection]);
+
+  useEffect(() => {
+    const container = containerRef.current;
+
+    const handleScrollEnd = () => {
+      const { scrollLeft, scrollWidth, clientWidth } = container;
+      const isEndReached = scrollLeft + clientWidth >= scrollWidth;
+
+      if (isEndReached) {
+        setScrollDirection("left");
+      }
+    };
+
+    const handleScrollStart = () => {
+      const { scrollLeft } = container;
+      if (scrollLeft === 0) {
+        setScrollDirection("right");
+      }
+    };
+
+    container.addEventListener("scroll", handleScrollEnd);
+    container.addEventListener("scroll", handleScrollStart);
+
+    return () => {
+      container.removeEventListener("scroll", handleScrollEnd);
+      container.removeEventListener("scroll", handleScrollStart);
+    };
   }, []);
 
   return (
@@ -61,13 +93,11 @@ export default function Home() {
         <SliderScreen />
         {/* Recently Added */}
         <div className="HomeBox1-Div">
-          <dib className="HomeBox1-Button">
-            <SliderButton
-              iconPosition="left"
-              height="310px"
-              onClick={scrollLeft}
-            />
-          </dib>
+          <SliderButton
+            iconPosition="left"
+            height="310px"
+            onClick={scrollLeft}
+          />
           <div className="HomeBox1" ref={containerRef}>
             <MovieSlider Img={Img1} name="Wonder Woman" imd="8.5" />
             <MovieSlider Img={Img2} name="Ami bangladesh" imd="6.0" />
@@ -83,13 +113,11 @@ export default function Home() {
             <MovieSlider Img={Img12} name="Animal-2024" imd="8.0" />
             <MovieSlider Img={Img13} name="Priyotoma" imd="7.0" />
           </div>
-          <div className="HomeBox1-Button1">
-            <SliderButton
-              iconPosition="right"
-              height="310px"
-              onClick={scrollRight}
-            />
-          </div>
+          <SliderButton
+            iconPosition="right"
+            height="310px"
+            onClick={scrollRight}
+          />
         </div>
 
         <Try />
