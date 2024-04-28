@@ -5,6 +5,7 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import SliderScreen from "../Others/SliderScreen";
 import SliderScreen2 from "../Others/SliderScreen2";
+import SliderScreen3 from "../Others/SliderScreen3";
 
 import MovieSlider from "../Cart/MovieSlider";
 import Try from "../Others/Try";
@@ -87,14 +88,87 @@ export default function Home() {
     };
   }, []);
 
+  // Upcoming & New
+  const containerRef2 = useRef(null);
+  const [scrollDirection2, setScrollDirection2] = useState("right");
+
+  const scrollLeft2 = () => {
+    const container = containerRef2.current;
+    if (container) {
+      container.scrollBy({
+        top: 0,
+        left: -250,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollRight2 = () => {
+    const container = containerRef2.current;
+    if (container) {
+      container.scrollBy({
+        top: 0,
+        left: 250,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (scrollDirection2 === "right") {
+        scrollRight2();
+      } else {
+        scrollLeft2();
+      }
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [scrollDirection2]);
+
+  useEffect(() => {
+    const container = containerRef2.current;
+
+    const handleScrollEnd = () => {
+      if (container) {
+        const { scrollLeft, scrollWidth, clientWidth } = container;
+        const isEndReached = scrollLeft + clientWidth >= scrollWidth;
+
+        if (isEndReached) {
+          setScrollDirection2("left");
+        }
+      }
+    };
+
+    const handleScrollStart = () => {
+      if (container) {
+        const { scrollLeft } = container;
+        if (scrollLeft === 0) {
+          setScrollDirection2("right");
+        }
+      }
+    };
+
+    if (container) {
+      container.addEventListener("scroll", handleScrollEnd);
+      container.addEventListener("scroll", handleScrollStart);
+
+      return () => {
+        container.removeEventListener("scroll", handleScrollEnd);
+        container.removeEventListener("scroll", handleScrollStart);
+      };
+    }
+  }, []);
   return (
     <div className="body">
       <Header />
       <div className="box">
         <SliderScreen />
-        <SliderScreen2 />
+
+        <SliderScreen3 />
+
         {/* Recently Added */}
-        <p className="HomeText1">Recently Added</p>
+        <button className="Home-Button1">Recently Added</button>
         <div className="HomeBox1-Div">
           <SliderButton
             iconPosition="left"
@@ -120,6 +194,38 @@ export default function Home() {
             iconPosition="right"
             height="310px"
             onClick={scrollRight}
+          />
+        </div>
+
+        <SliderScreen2 />
+
+        {/* Upcoming & New */}
+        <button className="Home-Button1">Upcoming & New</button>
+        <div className="HomeBox1-Div">
+          <SliderButton
+            iconPosition="left"
+            height="310px"
+            onClick={scrollLeft2}
+          />
+          <div className="HomeBox1" ref={containerRef2}>
+            <MovieSlider Img={Img1} name="Wonder Woman" imd="8.5" />
+            <MovieSlider Img={Img2} name="Ami bangladesh" imd="6.0" />
+            <MovieSlider Img={Img3} name="Bahubali 2" imd="8.0" />
+            <MovieSlider Img={Img4} name="Bhilaa-2024" imd="7.5" />
+            <MovieSlider Img={Img5} name="Black Panther" imd="8.0" />
+            <MovieSlider Img={Img6} name="Fast & Furious 6" imd="7.0" />
+            <MovieSlider Img={Img7} name="Glass" imd="8.0" />
+            <MovieSlider Img={Img8} name="Kaiser" imd="7.5" />
+            <MovieSlider Img={Img9} name="RRR-2022" imd="7.5" />
+            <MovieSlider Img={Img10} name="The Conjuring 2" imd="5.5" />
+            <MovieSlider Img={Img11} name="Advocate Achinta Aich" imd="0.0" />
+            <MovieSlider Img={Img12} name="Animal-2024" imd="8.0" />
+            <MovieSlider Img={Img13} name="Priyotoma" imd="7.0" />
+          </div>
+          <SliderButton
+            iconPosition="right"
+            height="310px"
+            onClick={scrollRight2}
           />
         </div>
 

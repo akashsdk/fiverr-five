@@ -1,11 +1,16 @@
-.HomeText1{
-  font-size: 30px;
-  font-weight: 700;
-  text-align: left;
-  margin-top: 0px;
-  margin-bottom: 0px;
+.Home-Button1 {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 900;
   font-family: 'Times New Roman', Times, serif;
-  margin-left: 30px;
+  background-color: rgb(21, 222, 244);
+  color: #4a4747;
+  border: none;
+  opacity: 0.7;
 }
 /* Recently Added */
 .HomeBox1-Button {
