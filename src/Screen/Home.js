@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import "./Home.css";
 
 import Header from "../Components/Header";
@@ -22,32 +22,6 @@ import Img12 from "../Data/animal-2024.jpeg";
 import Img13 from "../Data/priyotoma.jpg";
 
 export default function Home() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const boxes = [
-    { color: 'red' },
-    { color: 'blue' },
-    { color: 'green' },
-    { color: 'yellow' },
-    { color: 'orange' }
-  ];
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      slideRight();
-    }, 5000); // Slide every 5 seconds
-
-    return () => clearInterval(intervalId);
-  }, []); // Run only once when component mounts
-
-  const slideLeft = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? boxes.length - 1 : prevIndex - 1));
-  };
-
-  const slideRight = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === boxes.length - 1 ? 0 : prevIndex + 1));
-  };
-
   return (
     <div className="body">
       <Header />
@@ -55,53 +29,33 @@ export default function Home() {
         <SliderScreen />
         {/* Recently Added */}
         <div className="HomeBox1">
-          <MovieSlider Img={Img1} name="Karagar" imd="7.5" />
+          <MovieSlider Img={Img1} name="Wonder Woman" imd="8.5" />
 
-          <MovieSlider Img={Img2} name="Karagar" imd="7.5" />
+          <MovieSlider Img={Img2} name="Ami bangladesh" imd="6.0" />
 
-          <MovieSlider Img={Img3} name="Karagar" imd="7.5" />
+          <MovieSlider Img={Img3} name="Bahubali 2" imd="8.0" />
 
-          <MovieSlider Img={Img4} name="Karagar" imd="7.5" />
+          <MovieSlider Img={Img4} name="Bhilaa-2024" imd="7.5" />
 
-          <MovieSlider Img={Img5} name="Karagar" imd="7.5" />
+          <MovieSlider Img={Img5} name="Black Panther" imd="8.0" />
 
-          <MovieSlider Img={Img6} name="Karagar" imd="7.5" />
+          <MovieSlider Img={Img6} name="Fast & Furious 6" imd="7.0" />
 
-          <MovieSlider Img={Img7} name="Karagar" imd="7.5" />
+          <MovieSlider Img={Img7} name="Glass" imd="8.0" />
 
-          <MovieSlider Img={Img8} name="Karagar" imd="7.5" />
+          <MovieSlider Img={Img8} name="Kaiser" imd="7.5" />
 
-          <MovieSlider Img={Img9} name="Karagar" imd="7.5" />
+          <MovieSlider Img={Img9} name="RRR-2022" imd="7.5" />
 
-          <MovieSlider Img={Img10} name="Karagar" imd="7.5" />
+          <MovieSlider Img={Img10} name="Tallenge - The Conjuring 2" imd="5.5" />
 
-          <MovieSlider Img={Img11} name="Karagar" imd="7.5" />
+          <MovieSlider Img={Img11} name="Advocate Achinta Aich" imd="0.0" />
 
-          <MovieSlider Img={Img12} name="Karagar" imd="7.5" />
+          <MovieSlider Img={Img12} name="Animal-2024" imd="8.0" />
 
-          <MovieSlider Img={Img13} name="Karagar" imd="7.5" />
+          <MovieSlider Img={Img13} name="Priyotoma" imd="7.0" />
         </div>
 
-
-
-
-
-
-        <div className="box-slider">
-      <div className="boxes" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-        {boxes.map((box, index) => (
-          <div key={index} className="box" style={{ backgroundColor: box.color }}></div>
-        ))}
-      </div>
-      <div className="buttons">
-        <button onClick={slideLeft}>Left</button>
-        <button onClick={slideRight}>Right</button>
-      </div>
-    </div>
-
-
-
-    
         <div style={{ height: "1000px" }}></div>
         <Footer />
       </div>

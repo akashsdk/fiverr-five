@@ -1,7 +1,7 @@
 .MovieSlider-Body {
   height: 310px;
   width: 185px;
-  border: 1.5px solid #fff;
+  border: 2px solid #000000;
   background-color: black;
   border-radius: 5px;
   cursor: pointer;
@@ -11,6 +11,10 @@
   align-items: center;
   flex-direction: column;
   margin: 10px;
+}
+
+.MovieSlider-Body:hover {
+    border-bottom: 2px solid #ff0000;
 }
 
 .MovieSlider-Img {
