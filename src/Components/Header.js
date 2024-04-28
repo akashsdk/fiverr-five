@@ -24,7 +24,7 @@ import {
 } from "@ant-design/icons";
 import { Drawer } from "antd";
 
-import HeaderLogo from "../Img/Header Logo.png";
+import HeaderLogo from "../Icon/WebSite Logo.png";
 import Img1 from "../Img/App store logo.png";
 import Img2 from "../Img/play soter.png";
 

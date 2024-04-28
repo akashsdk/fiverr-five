@@ -1,3 +1,12 @@
+.HomeText1{
+  font-size: 30px;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 30px;
+}
 /* Recently Added */
 .HomeBox1-Button {
   margin-top: 0px;

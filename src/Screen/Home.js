@@ -4,6 +4,7 @@ import "./Home.css";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import SliderScreen from "../Others/SliderScreen";
+import SliderScreen2 from "../Others/SliderScreen2";
 
 import MovieSlider from "../Cart/MovieSlider";
 import Try from "../Others/Try";
@@ -91,7 +92,9 @@ export default function Home() {
       <Header />
       <div className="box">
         <SliderScreen />
+        <SliderScreen2 />
         {/* Recently Added */}
+        <p className="HomeText1">Recently Added</p>
         <div className="HomeBox1-Div">
           <SliderButton
             iconPosition="left"
