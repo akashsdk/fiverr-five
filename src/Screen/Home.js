@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 
 import Header from "../Components/Header";
@@ -6,6 +6,7 @@ import Footer from "../Components/Footer";
 import SliderScreen from "../Others/SliderScreen";
 
 import MovieSlider from "../Cart/MovieSlider";
+import Try from "../Others/Try";
 
 import Img1 from "../Data/ Wonder Woman.webp";
 import Img2 from "../Data/Ami bangladesh.jpeg";
@@ -20,41 +21,78 @@ import Img10 from "../Data/Tallenge - The Conjuring 2.jpg";
 import Img11 from "../Data/advocate achinta aich.jpg";
 import Img12 from "../Data/animal-2024.jpeg";
 import Img13 from "../Data/priyotoma.jpg";
+import SliderButton from "../Components/SliderButton";
 
 export default function Home() {
+  // Recently Added
+
+  const containerRef = useRef(null);
+
+  const scrollLeft = () => {
+    const container = containerRef.current;
+    container.scrollBy({
+      top: 0,
+      left: -250, // Adjust scroll amount as needed
+      behavior: "smooth",
+    });
+  };
+
+  const scrollRight = () => {
+    const container = containerRef.current;
+    container.scrollBy({
+      top: 0,
+      left: 250, // Adjust scroll amount as needed
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      scrollRight();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="body">
       <Header />
       <div className="box">
         <SliderScreen />
         {/* Recently Added */}
-        <div className="HomeBox1">
-          <MovieSlider Img={Img1} name="Wonder Woman" imd="8.5" />
-
-          <MovieSlider Img={Img2} name="Ami bangladesh" imd="6.0" />
-
-          <MovieSlider Img={Img3} name="Bahubali 2" imd="8.0" />
-
-          <MovieSlider Img={Img4} name="Bhilaa-2024" imd="7.5" />
-
-          <MovieSlider Img={Img5} name="Black Panther" imd="8.0" />
-
-          <MovieSlider Img={Img6} name="Fast & Furious 6" imd="7.0" />
-
-          <MovieSlider Img={Img7} name="Glass" imd="8.0" />
-
-          <MovieSlider Img={Img8} name="Kaiser" imd="7.5" />
-
-          <MovieSlider Img={Img9} name="RRR-2022" imd="7.5" />
-
-          <MovieSlider Img={Img10} name="Tallenge - The Conjuring 2" imd="5.5" />
-
-          <MovieSlider Img={Img11} name="Advocate Achinta Aich" imd="0.0" />
-
-          <MovieSlider Img={Img12} name="Animal-2024" imd="8.0" />
-
-          <MovieSlider Img={Img13} name="Priyotoma" imd="7.0" />
+        <div className="HomeBox1-Div">
+          <dib className="HomeBox1-Button">
+            <SliderButton
+              iconPosition="left"
+              height="310px"
+              onClick={scrollLeft}
+            />
+          </dib>
+          <div className="HomeBox1" ref={containerRef}>
+            <MovieSlider Img={Img1} name="Wonder Woman" imd="8.5" />
+            <MovieSlider Img={Img2} name="Ami bangladesh" imd="6.0" />
+            <MovieSlider Img={Img3} name="Bahubali 2" imd="8.0" />
+            <MovieSlider Img={Img4} name="Bhilaa-2024" imd="7.5" />
+            <MovieSlider Img={Img5} name="Black Panther" imd="8.0" />
+            <MovieSlider Img={Img6} name="Fast & Furious 6" imd="7.0" />
+            <MovieSlider Img={Img7} name="Glass" imd="8.0" />
+            <MovieSlider Img={Img8} name="Kaiser" imd="7.5" />
+            <MovieSlider Img={Img9} name="RRR-2022" imd="7.5" />
+            <MovieSlider Img={Img10} name="The Conjuring 2" imd="5.5" />
+            <MovieSlider Img={Img11} name="Advocate Achinta Aich" imd="0.0" />
+            <MovieSlider Img={Img12} name="Animal-2024" imd="8.0" />
+            <MovieSlider Img={Img13} name="Priyotoma" imd="7.0" />
+          </div>
+          <div className="HomeBox1-Button1">
+            <SliderButton
+              iconPosition="right"
+              height="310px"
+              onClick={scrollRight}
+            />
+          </div>
         </div>
+
+        <Try />
 
         <div style={{ height: "1000px" }}></div>
         <Footer />

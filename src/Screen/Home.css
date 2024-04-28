@@ -1,6 +1,14 @@
 /* Recently Added */
-.HomeBox1{
+.HomeBox1-Button{
+    margin-top: 0px;
+}
+
+.HomeBox1-Div{
     width: 100%;
+    display: flex;
+}
+.HomeBox1{
+    width: 90%;
     display: flex;
     justify-content: space-between;
     overflow-x: auto;
