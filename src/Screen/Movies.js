@@ -3,13 +3,14 @@ import "./Movies.css";
 
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import MoviesScreen from "../Others/MoviesScreen";
 
 export default function Movies() {
   return (
     <div className="body">
       <Header />
       <div className="box">
-        Movies
+        <MoviesScreen/>
         <Footer />
       </div>
     </div>

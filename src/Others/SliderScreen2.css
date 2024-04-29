@@ -10,7 +10,7 @@
   align-items: center;
   font-size: 25px;
   font-weight: 900;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   cursor: pointer;
   background-color: rgb(21, 222, 244);
   color: #4a4747;
@@ -30,19 +30,22 @@
   overflow-x: auto;
   white-space: nowrap;
 }
-.SliderScreen2-Button2{
-    height: 255px;
-    border: none;
-    cursor: pointer;
-    margin: 20px;
+.SliderScreen2-Button2 {
+  height: 260px;
+  border: none;
+  cursor: pointer;
+  margin: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.SliderScreen2-Img{
-    height: 250px;
+.SliderScreen2-Img {
+  height: 250px;
+  border-radius: 5px;
 }
 
-
-
-
-
-
-
+.SliderScreen2-Button2:hover .SliderScreen2-Img{
+  transform: scale(1.4);
+  border-radius: 5px;
+}

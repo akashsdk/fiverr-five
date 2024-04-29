@@ -24,7 +24,7 @@ export default function SliderScreen3() {
   return (
     <div className="SliderScreen3-Body">
       <button className="SliderScreen2-Button1" onClick={toggleBoxVisibility}>
-        {boxVisible ? "Exclusives!" : "Show Exclusives!"}
+        {boxVisible ? "Exclusives" : "Show Exclusives"}
         {boxVisible ? <CaretUpOutlined /> : <CaretDownOutlined />}
       </button>
       {boxVisible && (

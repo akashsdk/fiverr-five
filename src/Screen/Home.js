@@ -6,6 +6,9 @@ import Footer from "../Components/Footer";
 import SliderScreen from "../Others/SliderScreen";
 import SliderScreen2 from "../Others/SliderScreen2";
 import SliderScreen3 from "../Others/SliderScreen3";
+import SliderButton from "../Components/SliderButton";
+import MoviesScreen from "../Others/MoviesScreen";
+import ShowsScreen from "../Others/ShowsScreen";
 
 import MovieSlider from "../Cart/MovieSlider";
 import Try from "../Others/Try";
@@ -23,7 +26,7 @@ import Img10 from "../Data/Tallenge - The Conjuring 2.jpg";
 import Img11 from "../Data/advocate achinta aich.jpg";
 import Img12 from "../Data/animal-2024.jpeg";
 import Img13 from "../Data/priyotoma.jpg";
-import SliderButton from "../Components/SliderButton";
+
 
 export default function Home() {
   // Recently Added
@@ -227,6 +230,18 @@ export default function Home() {
             height="310px"
             onClick={scrollRight2}
           />
+        </div>
+
+        {/* Exclusives Movies */}
+        <button className="Home-Button1">Exclusives Movies</button>
+        <div className="HomeBox1-Div">
+          <MoviesScreen />
+        </div>
+
+        {/* Exclusives Shows */}
+        <button className="Home-Button1">Exclusives TV Shows</button>
+        <div className="HomeBox1-Div">
+          <ShowsScreen />
         </div>
 
         <Try />

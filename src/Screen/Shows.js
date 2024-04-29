@@ -3,13 +3,14 @@ import "./Shows.css";
 
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import ShowsScreen from "../Others/ShowsScreen";
 
 export default function Shows() {
   return (
     <div className="body">
       <Header />
       <div className="box">
-        <p>Shows</p>
+        <ShowsScreen/>
         <Footer />
       </div>
     </div>
