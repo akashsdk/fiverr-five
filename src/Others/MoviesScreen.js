@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./MoviesScreen.css";
 import MoviesCart from "../Cart/MoviesCart";
+import { SearchOutlined } from "@ant-design/icons";
 
 import Img1 from "../Data/Movie Pic-1.jpeg";
 import Img2 from "../Data/Pic-2.jpeg";
@@ -16,6 +17,9 @@ import Img11 from "../Data/Pic-11.jpeg";
 
 export default function MoviesScreen() {
   const [showAll, setShowAll] = useState(false);
+  const [searchName, setSearchName] = useState("");
+  const [searchLanguage, setSearchLanguage] = useState("");
+
 
   const movies = [
     {
@@ -152,27 +156,68 @@ export default function MoviesScreen() {
     },
   ];
 
+  const filterMovies = () => {
+    let filteredMovies = movies;
+    if (searchName) {
+      filteredMovies = filteredMovies.filter((movie) =>
+        movie.Name.toLowerCase().includes(searchName.toLowerCase())
+      );
+    }
+    if (searchLanguage) {
+      filteredMovies = filteredMovies.filter(
+        (movie) => movie.Language.toLowerCase() === searchLanguage.toLowerCase()
+      );
+    }
+    return filteredMovies;
+  };
+
   const renderMovies = () => {
+    const filteredMovies = filterMovies();
     if (showAll) {
-      return movies.map((movie, index) => (
+      return filteredMovies.map((movie, index) => (
         <MoviesCart key={index} {...movie} />
       ));
     } else {
-      return movies
+      return filteredMovies
         .slice(0, 10)
         .map((movie, index) => <MoviesCart key={index} {...movie} />);
     }
+  };
+
+  const handleReload = () => {
+    window.location.reload();
   };
 
   return (
     <div className="MoviesScreen-Body">
       <div className="MoviesScreen-Box">
         <div className="MoviesScreen-Div">
-          <input className="MoviesScreen-Input" placeholder="Movie Name" />
-          <select className="MoviesScreen-Select">
-            <option value="someOption">Some option</option>
-            <option value="otherOption">Other option</option>
+          <input
+            className="MoviesScreen-Input"
+            placeholder="Movie Name"
+            value={searchName}
+            onChange={(e) => setSearchName(e.target.value)}
+          />
+          <select
+            className="MoviesScreen-Select"
+            value={searchLanguage}
+            onChange={(e) => setSearchLanguage(e.target.value)}
+          >
+            <option value="">Language</option>
+            <option value="Bengali">Bengali</option>
+            <option value="Hindi">Hindi</option>
+            <option value="French">French</option>
+            <option value="English">English</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Korean">Korean</option>
+            <option value="Spanish">Spanish</option>
+            <option value="Tamil">Tamil</option>
+            <option value="Telugu">Telugu</option>
           </select>
+          <button className="MoviesScreen-Button2" onClick={handleReload}>
+            <SearchOutlined />
+            Show All
+          </button>
         </div>
       </div>
       <div className="MoviesScreen-Container">{renderMovies()}</div>

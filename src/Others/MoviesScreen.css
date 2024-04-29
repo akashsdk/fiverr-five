@@ -1,49 +1,80 @@
 .MoviesScreen-Body {
-    padding: 20px; /* Adjust as needed */
-  }
-  
-  .MoviesScreen-Container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+  width: 100%;
+  padding: 20px; /* Adjust as needed */
+}
 
-  .MoviesScreen-Box{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-  .MoviesScreen-Div{
-    width: 70%;
-    height: 200px;
-    background-color: rgb(33, 33, 33);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .MoviesScreen-Input{
-    height: 40px;
-    font-size: 20px;
-    font-weight: 600;
-    background-color: rgb(33, 33, 33);
-    width: 95%;
-    outline: none;
-    border-bottom: 2px solid rgb(111, 111, 111);
-    border-right: none;
-  }
-  .MoviesScreen-Select{
+.MoviesScreen-Container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-  }
-  .MoviesScreen-Button{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: rgb(255, 0, 0);
-    font-size: 18px;
-  }
-  
+.MoviesScreen-Box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.MoviesScreen-Div {
+  width: 70%;
+  height: 200px;
+  background-color: rgb(33, 33, 33);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.MoviesScreen-Input {
+  height: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: rgb(33, 33, 33);
+  width: 95%;
+  outline: none;
+  border-bottom: 2px solid rgb(111, 111, 111);
+  border-right: none;
+  color: #fff;
+}
+
+.MoviesScreen-Select {
+  height: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: rgb(33, 33, 33);
+  width: 95%;
+  outline: none;
+  border: 2px solid rgb(111, 111, 111);
+  margin-top: 20px;
+  color: #c2c2c2;
+  border-radius: 5px;
+}
+.MoviesScreen-Button2 {
+  height: 40px;
+  width: 150px;
+  margin-top: 20px;
+  background-color: rgb(1, 105, 105);
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.MoviesScreen-Button2:hover {
+  background-color: rgb(4, 159, 159);
+}
+.MoviesScreen-Button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: rgb(255, 0, 0);
+  font-size: 18px;
+}
