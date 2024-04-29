@@ -166,12 +166,31 @@ export default function MoviesScreen() {
 
   return (
     <div className="MoviesScreen-Body">
+      <div className="MoviesScreen-Box">
+        <div className="MoviesScreen-Div">
+          <input className="MoviesScreen-Input" placeholder="Movie Name" />
+          <select className="MoviesScreen-Select">
+            <option value="someOption">Some option</option>
+            <option value="otherOption">Other option</option>
+          </select>
+        </div>
+      </div>
       <div className="MoviesScreen-Container">{renderMovies()}</div>
       <div>
         {showAll ? (
-          <button onClick={() => setShowAll(false)}>See less</button>
+          <button
+            className="MoviesScreen-Button"
+            onClick={() => setShowAll(false)}
+          >
+            See less
+          </button>
         ) : (
-          <button onClick={() => setShowAll(true)}>See more</button>
+          <button
+            className="MoviesScreen-Button"
+            onClick={() => setShowAll(true)}
+          >
+            See more
+          </button>
         )}
       </div>
     </div>

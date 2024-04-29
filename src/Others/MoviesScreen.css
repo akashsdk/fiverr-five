@@ -7,6 +7,43 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  
-  
+
+  .MoviesScreen-Box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .MoviesScreen-Div{
+    width: 70%;
+    height: 200px;
+    background-color: rgb(33, 33, 33);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .MoviesScreen-Input{
+    height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgb(33, 33, 33);
+    width: 95%;
+    outline: none;
+    border-bottom: 2px solid rgb(111, 111, 111);
+    border-right: none;
+  }
+  .MoviesScreen-Select{
+
+  }
+  .MoviesScreen-Button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(255, 0, 0);
+    font-size: 18px;
+  }
   
