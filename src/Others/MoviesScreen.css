@@ -1,5 +1,12 @@
 .MoviesScreen-Body {
-  height: auto;
-  width: 100%;
-  display: flex;
-}
+    padding: 20px; /* Adjust as needed */
+  }
+  
+  .MoviesScreen-Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  
+  

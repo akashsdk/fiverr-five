@@ -8,7 +8,7 @@ export default function Try() {
 
 
 
-
+{/* 
 
 import Img1 from "../Data/Img1.jpeg";
 import Img2 from "../Data/Img2.jpeg";
@@ -19,7 +19,7 @@ import Img6 from "../Data/Img6.jpeg";
 import Img7 from "../Data/Img7.jpeg";
 import Img8 from "../Data/Img8.jpeg";
 import Img9 from "../Data/Img9.jpeg";
-import Img10 from "../Data/Img10.jpeg";
+import Img10 from "../Data/Img10.jpeg"; */}
 
 
 
