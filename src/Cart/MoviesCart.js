@@ -17,6 +17,9 @@ export default function MoviesCart({
   mainCatalogue,
   Director,
   Writer,
+  Seasons,
+  Network,
+  Stars,
 }) {
   const [open, setOpen] = useState(false);
 
@@ -73,10 +76,40 @@ export default function MoviesCart({
               Released: <p className="MoviesCart-Drawer-Text5"> {Released}</p>
             </p>
             <p className="MoviesCart-Drawer-Text2">
-              Director: <p className="MoviesCart-Drawer-Text5"> {Director}</p>
+              {Director && (
+                <>
+                  Director:{" "}
+                  <span className="MoviesCart-Drawer-Text5">{Director}</span>
+                </>
+              )}
             </p>
             <p className="MoviesCart-Drawer-Text2">
-              Writer: <p className="MoviesCart-Drawer-Text5"> {Writer}</p>
+              {Seasons && (
+                <>
+                  Seasons:{" "}
+                  <span className="MoviesCart-Drawer-Text5">{Seasons}</span>
+                </>
+              )}
+            </p>
+            <p className="MoviesCart-Drawer-Text2">
+              {Writer && (
+                <>
+                  Writer:{" "}
+                  <span className="MoviesCart-Drawer-Text5">{Writer}</span>
+                </>
+              )}
+            </p>
+            <p className="MoviesCart-Drawer-Text2">
+              {Network && (
+                <>
+                  Network:{" "}
+                  <span className="MoviesCart-Drawer-Text5">{Network}</span>
+                </>
+              )}
+            </p>
+
+            <p className="MoviesCart-Drawer-Text2">
+              Stars: <p className="MoviesCart-Drawer-Text5"> {Stars}</p>
             </p>
             <p className="MoviesCart-Drawer-Text3">Plot: {Plot}</p>
 
@@ -84,12 +117,12 @@ export default function MoviesCart({
 
             <div className="MoviesCart-Div">
               <button className="MoviesCart-Drawer-Button">
-                <AppstoreAddOutlined className="MoviesCart-Drawer-Icon3"/>
+                <AppstoreAddOutlined className="MoviesCart-Drawer-Icon3" />
                 <p> WatchList</p>
               </button>
 
-              <button  className="MoviesCart-Drawer-Button">
-                <CaretRightOutlined className="MoviesCart-Drawer-Icon2"/>
+              <button className="MoviesCart-Drawer-Button">
+                <CaretRightOutlined className="MoviesCart-Drawer-Icon2" />
                 <p>Play Now</p>
               </button>
             </div>

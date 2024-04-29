@@ -1,6 +1,5 @@
 .MoviesScreen-Body {
   width: 100%;
-  padding: 20px; /* Adjust as needed */
 }
 
 .MoviesScreen-Container {
@@ -77,4 +76,10 @@
   cursor: pointer;
   color: rgb(255, 0, 0);
   font-size: 18px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .MoviesScreen-Div {
+    width: 95%;
+  }
 }

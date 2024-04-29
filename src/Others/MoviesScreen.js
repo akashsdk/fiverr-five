@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./MoviesScreen.css";
 import MoviesCart from "../Cart/MoviesCart";
-import { SearchOutlined } from "@ant-design/icons";
+import { ReloadOutlined } from "@ant-design/icons";
 
 import Img1 from "../Data/Movie Pic-1.jpeg";
 import Img2 from "../Data/Pic-2.jpeg";
@@ -215,7 +215,7 @@ export default function MoviesScreen() {
             <option value="Telugu">Telugu</option>
           </select>
           <button className="MoviesScreen-Button2" onClick={handleReload}>
-            <SearchOutlined />
+          <ReloadOutlined />
             Show All
           </button>
         </div>
