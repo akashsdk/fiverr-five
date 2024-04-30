@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./ShowsScreen.css";
 import "./MoviesScreen.css";
 import MoviesCart from "../Cart/MoviesCart";
 import { ReloadOutlined } from "@ant-design/icons";

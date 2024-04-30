@@ -16,6 +16,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  margin-top: 20px;
 }
 .MoviesScreen-Div {
   width: 70%;
@@ -81,5 +82,24 @@
 @media only screen and (max-width: 1000px) {
   .MoviesScreen-Div {
     width: 95%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .MoviesScreen-Container {
+    justify-content: space-around;
+  }
+  .MoviesScreen-Input {
+    height: 35px;
+    font-size: 18px;
+    border-top: none;
+  }
+
+  .MoviesScreen-Select {
+    height: 35px;
+    font-size: 18px;
+  }
+  .MoviesScreen-Button2 {
+    height: 40px;
+    width: 180px;
   }
 }

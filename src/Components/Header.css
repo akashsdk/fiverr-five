@@ -94,7 +94,7 @@
 }
 
 .HeaderLink2:hover {
-  color: #ff0000;
+  color: #0493a9;
 }
 
 .HeaderIcon2 {
@@ -140,8 +140,8 @@
 }
 
 .Header-Drawer-aTag:hover {
-  color: red;
-  border: 1.5px solid red;
+  color: #0493a9;
+  border: 1.5px solid #0493a9;
 }
 
 .Header-Drawer-Icon {
