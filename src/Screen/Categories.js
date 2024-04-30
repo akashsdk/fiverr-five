@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Categories.css";
 import "../Others/MoviesScreen.css";
 import { ReloadOutlined } from "@ant-design/icons";
+import { Pagination, ConfigProvider } from "antd";
 
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
@@ -32,12 +33,15 @@ import Img21 from "../Data/web-10.jpeg";
 import Img22 from "../Data/web-11.jpeg";
 
 export default function Categories() {
+  const [currentPage, setCurrentPage] = useState(1);
   const [showAll, setShowAll] = useState(false);
   const [searchName, setSearchName] = useState("");
   const [searchLanguage, setSearchLanguage] = useState("");
   const [mainCatalogue, setMainCatalogue] = useState("");
   const [Catalogue, setCatalogue] = useState("");
   const [IMD, setIMD] = useState("");
+
+  const moviesPerPage = 10;
 
   const movies = [
     {
@@ -348,19 +352,24 @@ export default function Categories() {
 
   const renderMovies = () => {
     const filteredMovies = filterMovies();
-    if (showAll) {
-      return filteredMovies.map((movie, index) => (
-        <MoviesCart key={index} {...movie} />
-      ));
-    } else {
-      return filteredMovies
-        .slice(0, 10)
-        .map((movie, index) => <MoviesCart key={index} {...movie} />);
-    }
+    const indexOfLastMovie = currentPage * moviesPerPage;
+    const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
+    const currentMovies = filteredMovies.slice(
+      indexOfFirstMovie,
+      indexOfLastMovie
+    );
+
+    return currentMovies.map((movie, index) => (
+      <MoviesCart key={index} {...movie} />
+    ));
   };
 
   const handleReload = () => {
     window.location.reload();
+  };
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
   };
 
   const handleFilter = (filterValue) => {
@@ -415,7 +424,6 @@ export default function Categories() {
       default:
         break;
     }
-    
   };
 
   return (
@@ -524,22 +532,58 @@ export default function Categories() {
               </div>
             </div>
             <div className="MoviesScreen-Container">{renderMovies()}</div>
-            <div>
-              {showAll ? (
-                <button
-                  className="MoviesScreen-Button"
-                  onClick={() => setShowAll(false)}
-                >
-                  See less
-                </button>
-              ) : (
-                <button
-                  className="MoviesScreen-Button"
-                  onClick={() => setShowAll(true)}
-                >
-                  See more
-                </button>
-              )}
+            <div className="Categories-Pagination-Div">
+              <Pagination
+                defaultCurrent={currentPage}
+                total={movies.length}
+                pageSize={moviesPerPage}
+                onChange={handlePageChange}
+                size="default"
+                itemRender={(page, type, originalElement) => {
+                  if (type === "prev") {
+                    return (
+                      <span
+                        style={{
+                          color: "#10c1dc",
+                          padding: "5px",
+                          margin: "5px",
+                        }}
+                      >
+                        &lt;
+                      </span>
+                    );
+                  }
+                  if (type === "next") {
+                    return (
+                      <span
+                        style={{
+                          color: "#10c1dc",
+                          padding: "5px",
+                          margin: "5px",
+                        }}
+                      >
+                        &gt;
+                      </span>
+                    );
+                  }
+                  if (type === "jump-prev" || type === "jump-next") {
+                    return originalElement;
+                  }
+                  return (
+                    <span
+                      style={{
+                        backgroundColor: "rgb(1, 105, 105)",
+                        color: "#fff",
+                        padding: "15px",
+                        margin: "0px",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      {page}
+                    </span>
+                  );
+                }}
+              />
             </div>
           </div>
         </div>
