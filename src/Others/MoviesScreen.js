@@ -15,6 +15,7 @@ import Img9 from "../Data/Pic-9.jpeg";
 import Img10 from "../Data/Pic-10.jpeg";
 import Img11 from "../Data/Pic-11.jpeg";
 
+
 export default function MoviesScreen() {
   const [showAll, setShowAll] = useState(false);
   const [searchName, setSearchName] = useState("");

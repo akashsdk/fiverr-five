@@ -1,0 +1,24 @@
+.Categories-Body{
+    height: auto;
+    width: 100%;
+}
+.Categories-Top-Box{
+    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.Categories-Top-Button{
+    height: 40px;
+    width: 100px;
+    margin: 5px;
+    border: 1px solid red;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+.Categories-Top-Button:hover{
+    color: #10c1dc;
+}
