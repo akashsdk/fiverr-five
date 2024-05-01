@@ -76,3 +76,37 @@
 .SliderScreen-PlayButton:hover {
   opacity: 1;
 }
+
+@media only screen and (max-width: 600px) {
+  .SliderScreen-Body {
+    height: 250px;
+  }
+  .SliderScreen-Img {
+    height: 249px;
+  }
+  .SliderScreen-Div {
+    height: 249px;
+    margin-top: -340px;
+  }
+  .SliderScreen-ButtonDiv {
+    margin-top: -100px;
+  }
+  .SliderScreen-Buttons {
+    position: relative;
+    margin-top: -5px;
+  }
+  .SliderScreen-PlusButton {
+    height: 30px;
+    width: 30px;
+    opacity: 0.8;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .SliderScreen-PlayButton {
+    height: 30px;
+    width: 130px;
+    font-size: 20px;
+  }
+}

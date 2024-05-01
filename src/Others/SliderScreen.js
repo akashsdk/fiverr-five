@@ -8,7 +8,7 @@ import Img4 from "../Img/rumi-poster.webp";
 import SliderButton from "../Components/SliderButton";
 
 import { CaretRightOutlined, PlusOutlined } from "@ant-design/icons";
-import { Tooltip } from 'antd';
+import { Tooltip } from "antd";
 
 export default function SliderScreen() {
   const images = [Img1, Img2, Img3, Img4];
@@ -46,10 +46,16 @@ export default function SliderScreen() {
         className="SliderScreen-Img"
       />
       <div className="SliderScreen-Div">
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
           <SliderButton
             iconPosition="left"
-            height="400px"
+            height="250px"
             onClick={goToPrevImage}
           />
 
@@ -61,10 +67,10 @@ export default function SliderScreen() {
         </div>
 
         <div className="SliderScreen-ButtonDiv">
-        <Tooltip title="Add to Watchlist">
-          <button className="SliderScreen-PlusButton">
-            <PlusOutlined />
-          </button>
+          <Tooltip title="Add to Watchlist">
+            <button className="SliderScreen-PlusButton">
+              <PlusOutlined />
+            </button>
           </Tooltip>
 
           <button className="SliderScreen-PlayButton">
