@@ -1,6 +1,144 @@
+.Footer-Body {
+  height: auto;
+  width: 100%;
+}
+.Footer-Box {
+  height: 400px;
+  width: 100%;
+  background-color: rgb(35, 34, 34);
+  border-bottom: 1px solid red;
+  margin-bottom: 2px;
+}
+
+.Footer-div {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid red;
+}
+.Footer-Box-text5 {
+  margin-left: 30px;
+  text-align: left;
+}
+.Footer-Box-text6 {
+  margin-right: 30px;
+  text-align: left;
+}
+.Footer-div-Button {
+  border: none;
+  background-color: transparent;
+  color: red;
+  font-size: 16.5px;
+  margin-left: -7px;
+  cursor: pointer;
+}
 
 
 
 
 
-@media only screen and (max-width: 600px) {}
+
+
+
+
+
+
+
+.footer-Drawer {
+  display: flex;
+  margin-top: -30px;
+}
+
+.footer-Drawer-Box {
+  height: auto;
+  width: 50%;
+}
+.footer-Drawer-Box2 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-Drawer-TextDiv {
+  display: flex;
+}
+.footer-Drawer-Text {
+  font-size: 20px;
+  opacity: 0.6;
+  margin-bottom: 5px;
+}
+.footer-Drawer-Text2 {
+  font-size: 20px;
+  color: red;
+  opacity: 0.6;
+  margin-bottom: 5px;
+}
+.footer-Drawer-Input {
+  font-size: 20px;
+  border-color: rgb(98, 54, 242);
+}
+.footer-Drawer-TextArea {
+  font-size: 18px;
+  border-color: rgb(98, 54, 242);
+}
+.footer-Drawer-ButtonDiv {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.footer-Drawer-Button {
+  font-size: 20px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-Drawer-Button2 {
+  font-size: 20px;
+  height: 40px;
+  margin-left: 20px;
+  background-color: rgb(98, 54, 242);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-Drawer-Img {
+  height: 400px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .footer-Drawer-Box {
+    width: 100%;
+  }
+  .footer-Drawer-Box2 {
+    display: none;
+  }
+  .footer-Drawer-Text {
+    font-size: 18px;
+  }
+  .footer-Drawer-Text2 {
+    font-size: 18px;
+  }
+  .footer-Drawer-Input {
+    font-size: 16px;
+  }
+  .footer-Drawer-TextArea {
+    font-size: 15px;
+  }
+  .footer-Drawer-ButtonDiv {
+    margin-top: 20px;
+  }
+  .footer-Drawer-Button {
+    font-size: 16px;
+    height: 35px;
+  }
+  .footer-Drawer-Button2 {
+    font-size: 16px;
+    height: 35px;
+    margin-left: 10px;
+  }
+}
