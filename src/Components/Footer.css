@@ -1,6 +1,7 @@
 .Footer-Body {
   height: auto;
   width: 100%;
+  margin-top: 30px;
 }
 .Footer-Box {
   height: 400px;
@@ -8,7 +9,99 @@
   background-color: rgb(35, 34, 34);
   border-bottom: 1px solid red;
   margin-bottom: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.Footer-Box1{
+    flex: 1;
+    display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.Footer-Box2{
+    flex: 2;
+    background-color: aliceblue;
+}
+.Footer-Box3{
+    flex: 1;
+}
+
+.Footer-Box1-Img{
+    height: 50px;
+    margin-left: 20px;
+}
+.Footer-Box1-Box{
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.Footer-Box1-Div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.Footer-Box1-Img2{
+    height: 50px;
+    cursor: pointer;
+}
+.Footer-Box1-Img3{
+    height: 50px;
+    cursor: pointer;
+}
+.Footer-Box-text1{
+    font-size: 18px;
+    margin-top: 5px;
+    color: #0493a9;
+}
+.Footer-Box-text2{
+    font-size: 18px;
+    margin-top: -13px;
+    opacity: .7;
+}
+.Footer-Box1-Box2{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+.Footer-Box1-Icon{
+    font-size: 30px;
+    color: #0493a9;
+    opacity: .7;
+    cursor: pointer;
+}
+.Footer-Box1-Icon:hover{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .Footer-div {
   height: 100px;
@@ -77,11 +170,11 @@
 }
 .footer-Drawer-Input {
   font-size: 20px;
-  border-color: rgb(98, 54, 242);
+  border-color: #0493a9;
 }
 .footer-Drawer-TextArea {
   font-size: 18px;
-  border-color: rgb(98, 54, 242);
+  border-color: #0493a9;
 }
 .footer-Drawer-ButtonDiv {
   width: 100%;
@@ -101,11 +194,12 @@
   font-size: 20px;
   height: 40px;
   margin-left: 20px;
-  background-color: rgb(98, 54, 242);
+  background-color: #0493a9;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .footer-Drawer-Img {
   height: 400px;
 }

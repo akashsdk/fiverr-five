@@ -1,28 +1,19 @@
 import React, { useState } from "react";
 import "./Footer.css";
 
+import { Button, Drawer, Space, Input, notification } from "antd";
 import {
-  Button,
-  Dropdown,
-  Tooltip,
-  Drawer,
-  Space,
-  Input,
-  notification,
-} from "antd";
-import {
-  CaretUpOutlined,
-  CaretDownOutlined,
-  HomeOutlined,
-  AppstoreOutlined,
-  ContactsOutlined,
-  MacCommandOutlined,
-  DesktopOutlined,
-  CustomerServiceOutlined,
-  PhoneOutlined,
+  FacebookOutlined,
+  XOutlined,
+  InstagramOutlined,
+  YoutubeOutlined,
+  LinkedinOutlined,
 } from "@ant-design/icons";
 
-import img from "../Img/Feedback-removebg-preview.png";
+import Img1 from "../Img/Feedback-removebg-preview.png";
+import Img2 from "../Icon/WebSite Logo.png";
+import Img3 from "../Img/App store logo.png";
+import Img4 from "../Img/play soter.png";
 
 const { TextArea } = Input;
 export default function Footer() {
@@ -93,7 +84,33 @@ export default function Footer() {
   return (
     <div className="Footer-Body">
       {contextHolder}
-      <div className="Footer-Box">box</div>
+      <div className="Footer-Box">
+        <div className="Footer-Box1">
+          <img className="Footer-Box1-Img" src={Img2} alt="logo" />
+          <div className="Footer-Box1-Box">
+            <p className="Footer-Box-text1">Email:</p>
+            <p className="Footer-Box-text2">cinemaroobd@gmail.com</p>
+            <p className="Footer-Box-text1">Phone:</p>
+            <p className="Footer-Box-text2">01543-12345</p>
+          </div>
+          <div className="Footer-Box1-Box2">
+            <FacebookOutlined className="Footer-Box1-Icon"/>
+            <XOutlined className="Footer-Box1-Icon"/>
+            <YoutubeOutlined className="Footer-Box1-Icon"/>
+            <InstagramOutlined className="Footer-Box1-Icon"/>
+            <LinkedinOutlined className="Footer-Box1-Icon"/>
+          </div>
+          <div className="Footer-Box1-Div">
+            <img className="Footer-Box1-Img2" src={Img3} alt="logo" />
+            <img className="Footer-Box1-Img3" src={Img4} alt="logo" />
+          </div>
+        </div>
+
+        <div className="Footer-Box2">Box2</div>
+
+        <div className="Footer-Box3">Box3</div>
+      </div>
+
       <div className="Footer-div">
         <p className="Footer-Box-text5">
           Copyright &copy; {new Date().getFullYear()} CinemarooBD
@@ -121,7 +138,7 @@ export default function Footer() {
           <Space>
             <Button
               onClick={onClose}
-              style={{ borderColor: "#fb6565", color: "red" }}
+              style={{ borderColor: "#fb6565", color: "#0493a9" }}
             >
               Cancel
             </Button>
@@ -188,7 +205,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="footer-Drawer-Box2">
-            <img className="footer-Drawer-Img" alt="" src={img} />
+            <img className="footer-Drawer-Img" alt="" src={Img1} />
           </div>
         </div>
       </Drawer>
