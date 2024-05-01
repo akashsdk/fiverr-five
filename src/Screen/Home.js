@@ -246,7 +246,6 @@ export default function Home() {
 
         <Try />
 
-        <div style={{ height: "1000px" }}></div>
         <Footer />
       </div>
     </div>
