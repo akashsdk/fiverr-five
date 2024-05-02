@@ -149,28 +149,24 @@
 }
 
 .Header-Drawer-Button {
-  height: 50px;
+  height: 42px;
   width: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: black;
   margin-right: 20px;
-  border: 1.5px solid #656060;
+  border: none;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .Header-Drawer-Img {
-  height: 48px;
+  height: 40px;
   width: 148px;
 }
 
-.Header-Drawer-Img2 {
-  height: 70px;
-  width: 170px;
-  border-radius: 10px;
-}
+
 
 .HeaderLink3 {
   text-decoration: none;

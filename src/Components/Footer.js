@@ -14,6 +14,7 @@ import Img1 from "../Img/Feedback-removebg-preview.png";
 import Img2 from "../Icon/WebSite Logo.png";
 import Img3 from "../Img/App store logo.png";
 import Img4 from "../Img/play soter.png";
+import { Link } from "react-router-dom";
 
 const { TextArea } = Input;
 export default function Footer() {
@@ -91,24 +92,85 @@ export default function Footer() {
             <p className="Footer-Box-text1">Email:</p>
             <p className="Footer-Box-text2">cinemaroobd@gmail.com</p>
             <p className="Footer-Box-text1">Phone:</p>
-            <p className="Footer-Box-text2">01543-12345</p>
+            <p className="Footer-Box-text2">01500-000000</p>
           </div>
+          <p className="Footer-Box-text4">Get in touch</p>
           <div className="Footer-Box1-Box2">
-            <FacebookOutlined className="Footer-Box1-Icon"/>
-            <XOutlined className="Footer-Box1-Icon"/>
-            <YoutubeOutlined className="Footer-Box1-Icon"/>
-            <InstagramOutlined className="Footer-Box1-Icon"/>
-            <LinkedinOutlined className="Footer-Box1-Icon"/>
+            <FacebookOutlined className="Footer-Box1-Icon" />
+            <XOutlined className="Footer-Box1-Icon" />
+            <YoutubeOutlined className="Footer-Box1-Icon" />
+            <InstagramOutlined className="Footer-Box1-Icon" />
+            <LinkedinOutlined className="Footer-Box1-Icon" />
           </div>
           <div className="Footer-Box1-Div">
             <img className="Footer-Box1-Img2" src={Img3} alt="logo" />
-            <img className="Footer-Box1-Img3" src={Img4} alt="logo" />
+            <img className="Footer-Box1-Img2" src={Img4} alt="logo" />
           </div>
         </div>
 
-        <div className="Footer-Box2">Box2</div>
+        <div className="Footer-Box2">
+          <div className="Footer-Box2-Div">
+            <p className="Footer-Box-text3">EXPLORE</p>
+            <Link className="Footer-Box-Link" to="/shows">
+              Latest Shows
+            </Link>
+            <Link className="Footer-Box-Link" to="/movies">
+              Latest Movies
+            </Link>
+            <Link className="Footer-Box-Link" to="/categories">
+              All Categories
+            </Link>
+            <Link className="Footer-Box-Link" to="/shows">
+              Upcoming Shows
+            </Link>
+            <Link className="Footer-Box-Link" to="/movies">
+              Upcoming Movies
+            </Link>
+          </div>
+          <div className="Footer-Box2-Div">
+            <p className="Footer-Box-text3">COMPANY</p>
+            <Link className="Footer-Box-Link" to="/settings">
+              Setting
+            </Link>
+            <Link className="Footer-Box-Link" to="/watchlist">
+              Watchlist
+            </Link>
+            <Link className="Footer-Box-Link" to="/history">
+              History
+            </Link>
+            <Link className="Footer-Box-Link" to="/profile">
+              Profile
+            </Link>
+            <Link className="Footer-Box-Link" to="/about">
+              About Us
+            </Link>
+            <Link className="Footer-Box-Link" to="/contacts">
+              Contacts
+            </Link>
+          </div>
+          <div className="Footer-Box2-Div">
+            <p className="Footer-Box-text3">Other's Link</p>
+            <Link className="Footer-Box-Link" to="/blog">
+              Blog
+            </Link>
+            <Link className="Footer-Box-Link" to="/tos">
+              Terms of Service
+            </Link>
+            <Link className="Footer-Box-Link" to="/policy">
+              Privacy Policy
+            </Link>
+            <Link className="Footer-Box-Link" to="/faq">
+              FAQ
+            </Link>
+          </div>
+        </div>
 
-        <div className="Footer-Box3">Box3</div>
+        <div className="Footer-Box3">
+          <p>Question:</p>
+          <input placeholder="Email:"/>
+          <input placeholder="Text:"/>
+          <button>Sent</button>
+        </div>
       </div>
 
       <div className="Footer-div">

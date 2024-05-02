@@ -108,14 +108,12 @@ export default function Header() {
           <img src={HeaderLogo} className="HeaderImg" alt="Logo" />
         </Link>
 
-        
-
         <Link
           to="/shows"
           className="HeaderLink"
           onClick={() => handleTextClick(1)}
         >
-          <VideoCameraAddOutlined className="HeaderIcon"/>
+          <VideoCameraAddOutlined className="HeaderIcon" />
         </Link>
 
         <Link
@@ -123,7 +121,7 @@ export default function Header() {
           className="HeaderLink"
           onClick={() => handleTextClick(2)}
         >
-          <PlaySquareOutlined className="HeaderIcon"/>
+          <PlaySquareOutlined className="HeaderIcon" />
         </Link>
 
         <Link
@@ -131,7 +129,7 @@ export default function Header() {
           className="HeaderLink"
           onClick={() => handleTextClick(3)}
         >
-          <FileSearchOutlined  className="HeaderIcon"/>
+          <FileSearchOutlined className="HeaderIcon" />
         </Link>
       </div>
 
@@ -154,12 +152,10 @@ export default function Header() {
         open={open}
         key="right"
         className="HeaderDrawer"
-        style={{ backgroundColor: "black", }}
+        style={{ backgroundColor: "black" }}
         width={400}
       >
-        <div
-          
-        >
+        <div>
           <div className="HeaderDrawer-TopDiv">
             <CloseOutlined onClick={onClose} className="HeaderIcon" />
           </div>
@@ -202,7 +198,7 @@ export default function Header() {
                 <img src={Img1} alt="" className="Header-Drawer-Img" />
               </button>
               <button className="Header-Drawer-Button">
-                <img src={Img2} alt="" className="Header-Drawer-Img2" />
+                <img src={Img2} alt="" className="Header-Drawer-Img" />
               </button>
             </div>
 
@@ -238,16 +234,20 @@ export default function Header() {
             <div className="Header-Drawer-Line" />
 
             <div style={{ display: "flex" }}>
-              <Link to="/about" className="HeaderLink3" onClick={onLink}>
-                <p className="Header-Drawer-Text4">.About Us</p>
-              </Link>
-
               <Link to="/blog" className="HeaderLink3" onClick={onLink}>
                 <p className="Header-Drawer-Text4">.Blog</p>
               </Link>
 
-              <Link to="/contacts" className="HeaderLink3" onClick={onLink}>
-                <p className="Header-Drawer-Text4">.Contacts</p>
+              <Link to="/tos" className="HeaderLink3" onClick={onLink}>
+                <p className="Header-Drawer-Text4">.Terms</p>
+              </Link>
+
+              <Link to="/policy" className="HeaderLink3" onClick={onLink}>
+                <p className="Header-Drawer-Text4">.Policy</p>
+              </Link>
+
+              <Link to="/faq" className="HeaderLink3" onClick={onLink}>
+                <p className="Header-Drawer-Text4">.FAQ</p>
               </Link>
             </div>
           </div>

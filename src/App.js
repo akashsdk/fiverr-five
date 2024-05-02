@@ -17,6 +17,9 @@ import Profile from './OtherScreen/Profile';
 import Settings from './OtherScreen/Settings';
 import SignIn from './OtherScreen/SignIn';
 import Watchlist from './OtherScreen/Watchlist';
+import TermsofService from './OtherScreen/TermsofService';
+import PrivacyPolicy from './OtherScreen/PrivacyPolicy';
+import FAQ from './OtherScreen/FAQ';
 
 function App() {
   return (
@@ -39,6 +42,9 @@ function App() {
           <Route path="/settings" element={<Settings />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/watchlist" element={<Watchlist />} />
+          <Route path="/tos" element={<TermsofService />} />
+          <Route path="/policy" element={<PrivacyPolicy />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
       </div>
     </BrowserRouter>
