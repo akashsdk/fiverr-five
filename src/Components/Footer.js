@@ -166,11 +166,12 @@ export default function Footer() {
         </div>
 
         <div className="Footer-Box3">
-          <p>Question:</p>
-          <input placeholder="Email:"/>
-          <input placeholder="Text:"/>
-          <button>Sent</button>
+          <p className="Footer-Box-text7">Question:</p>
+          <input placeholder="Email:" className="Footer-Box3-Input"/>
+          <input placeholder="Text:" className="Footer-Box3-Input"/>
+          <button className="Footer-Box3-Button">Sent</button>
         </div>
+
       </div>
 
       <div className="Footer-div">
