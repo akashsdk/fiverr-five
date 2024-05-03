@@ -1,5 +1,5 @@
-import React from 'react'
-import './Blog.css';
+import React from "react";
+import "./Blog.css";
 
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
@@ -9,9 +9,9 @@ export default function Blog() {
     <div className="body">
       <Header />
       <div className="box">
-      Blog
+        Blog
         <Footer />
       </div>
     </div>
-  )
+  );
 }
