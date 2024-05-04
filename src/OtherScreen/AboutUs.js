@@ -40,9 +40,7 @@ export default function AboutUs() {
         Join us on this cinematic journey as we redefine the way you
         experience entertainment. CinemarooBD – where movies and shows meet
         freedom and affordability. For inquiries, suggestions, or
-        partnerships, feel free to reach out to us at...
-        <br />
-        <a href='mailto:cinemaroobd@gmail.com'>cinemaroobd@gmail.com</a>"
+        partnerships, feel free to reach out to us at <a href='mailto:cinemaroobd@gmail.com'>cinemaroobd@gmail.com</a>."
         />
 
         <Footer />

@@ -1,33 +1,39 @@
-.TextCart-Body{
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+.TextCart-Body {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
-.TextCart-Text1{
-    font-size: 40px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 700;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    margin-left: 2.5%;
-    opacity: .9;
+.TextCart-Text1 {
+  font-size: 40px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 2.5%;
+  opacity: 0.9;
 }
-.TextCart-Line{
-    height: 1px;
-    width: 95%;
-    background-color: red;
-    margin-left: 2.5%;
-    opacity: .7;
+.TextCart-Line {
+  height: 1px;
+  width: 95%;
+  background-color: red;
+  margin-left: 2.5%;
+  opacity: 0.7;
 }
-.TextCart-Text2{
-    width: 95%;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    margin-left: 2.5%;
-    text-align: justify;
-    margin-bottom: 0px;
-    opacity: .7;
+.TextCart-Text2 {
+  width: 95%;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  margin-left: 2.5%;
+  text-align: justify;
+  margin-bottom: 0px;
+  opacity: 0.7;
 }
+
+.TextCart-Body a {
+  color: rgb(21, 222, 244);
+  text-decoration: none;
+}
+
