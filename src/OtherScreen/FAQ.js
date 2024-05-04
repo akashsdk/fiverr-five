@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
@@ -8,9 +8,9 @@ export default function FAQ() {
     <div className="body">
       <Header />
       <div className="box">
-      FAQ
+        FAQ
         <Footer />
       </div>
     </div>
-  )
+  );
 }
