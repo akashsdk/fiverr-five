@@ -72,7 +72,7 @@ export default function PrivacyPolicy() {
           8. Contact Us
           <br />
           If you have any questions or concerns about this Privacy Policy,
-          please contact us at 'cinemaroobd@gmail.com'.
+          please contact us at <a href='mailto:cinemaroobd@gmail.com'>cinemaroobd@gmail.com</a>.
           <br />
           <br />
           By accessing or using the CinemarooBD website, you acknowledge that

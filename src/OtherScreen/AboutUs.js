@@ -42,7 +42,7 @@ export default function AboutUs() {
         freedom and affordability. For inquiries, suggestions, or
         partnerships, feel free to reach out to us at...
         <br />
-         cinemaroobd@gmail.com."
+        <a href='mailto:cinemaroobd@gmail.com'>cinemaroobd@gmail.com</a>"
         />
 
         <Footer />
