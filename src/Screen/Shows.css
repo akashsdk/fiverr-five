@@ -1,28 +1,66 @@
 .Search-Body {
-  height: auto;
-  width: 100%;
-}
-.Search-Box {
-  height: auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.Search-Back-Button {
-  border: none;
-  background-color: transparent;
-  color: azure;
-  cursor: pointer;
-}
-.Search-Back-Icon {
-  font-size: 50px;
-}
-.Search-Div{
+    height: auto;
+    width: 100%;
+  }
+  
+  .Search-Box {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Search-Back-Button {
+    border: none;
+    background-color: transparent;
+    color: azure;
+    cursor: pointer;
+  }
+  
+  .Search-Back-Icon {
+    font-size: 50px;
+  }
+  
+  .Search-Div {
     height: auto;
     width: 95%;
-}
-.Search-Input-Search{
-    height: 100px;
+  }
+  
+  .Search-Input-Search {
+    height: 60px;
     width: 90%;
-}
+  }
+  
+  .Search-Cancel-Button {
+    border: none;
+    background-color: transparent;
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .Search-Cancel-Button:hover {
+    color: #666;
+  }
+  
+  .Search-Advanced-Button {
+    border: none;
+    background-color: transparent;
+    color: #007bff;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .Search-Advanced-Button:hover {
+    text-decoration: underline;
+  }
+  
+  .Advanced-Search-Options {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    width: 90%;
+  }
+  
