@@ -1,4 +1,28 @@
-.Search-Body{
+.Search-Body {
+  height: auto;
+  width: 100%;
+}
+.Search-Box {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Search-Back-Button {
+  border: none;
+  background-color: transparent;
+  color: azure;
+  cursor: pointer;
+}
+.Search-Back-Icon {
+  font-size: 50px;
+}
+.Search-Div{
     height: auto;
-    width: 100%;
+    width: 95%;
+}
+.Search-Input-Search{
+    height: 100px;
+    width: 90%;
 }
