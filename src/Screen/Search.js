@@ -9,7 +9,7 @@ export default function Search() {
     <div className="body">
       <Header />
       <div className="box">
-        Search
+        <div className="Search-Body">okok</div>
         <Footer />
       </div>
     </div>
