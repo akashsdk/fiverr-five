@@ -1,127 +1,181 @@
-.Settings-Body{
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+.Settings-Body {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 /* Left-Side */
-.Settings-Left{
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.Settings-Left {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.Settings-Text1{
-    font-size: 35px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 10px;
+.Settings-Text1 {
+  font-size: 35px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
-.Settings-Left-Box{
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    border-right: 2px solid #ccc;
+.Settings-Left-Box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  border-right: 2px solid #ccc;
 }
-.Settings-Left-Button{
-    height: 40px;
-    border: none;
-    background-color: transparent;
-    font-size: 20px;
-    cursor: pointer;
-    margin-left: 20%;
+.Settings-Left-Button {
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 20%;
 }
-.Settings-Left-Link{
-    height: 40px;
-    border: none;
-    background-color: transparent;
-    color: #817f7f;
-    font-size: 20px;
-    text-decoration: none;
-    margin-left: 21.5%;
-    margin-top: 5px;
+.Settings-Left-Link {
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  color: #817f7f;
+  font-size: 20px;
+  text-decoration: none;
+  margin-left: 21.5%;
+  margin-top: 5px;
 }
 /* Right-Side */
-.Settings-Right{
-    height: calc(100vh - 55px);
-    width: 70%;
+.Settings-Right {
+  height: auto;
+  width: 70%;
 }
-.Settings-Right-Box{
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.Settings-Right-Box {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.Settings-Right-Div{
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+.Settings-Right-Div {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
-.Settings-Text2{
-    font-size: 20px;
-    margin-bottom: 0p;
-    color: #817f7f;
+.Settings-Text2 {
+  font-size: 20px;
+  margin-bottom: 0p;
+  color: #817f7f;
 }
-.Settings-Input{
-    margin-top: -15px;
-    height: 40px;
-    width: 80%;
-    border: none;
-    outline: none;
-    font-size: 20px;
-    background-color: #4f4e4e;
-    color: #fff;
-    padding: 5px;
-}
-
-.Settings-Right-button{
-    height: 45px;
-    font-size: 22px;
-    border: none;
-    outline: none;
-    background-color: red;
-    color: #fff;
-    margin-top: 30px;
-    cursor: pointer;
-    border: 1.5px solid red;
-    border-radius: 5px;
+.Settings-Input {
+  margin-top: -15px;
+  height: 40px;
+  width: 80%;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  background-color: #4f4e4e;
+  color: #fff;
+  padding: 5px;
 }
 
-.Settings-Right-button:hover{
-    background-color: transparent;
-    color: Red;
+.Settings-Right-button {
+  height: 45px;
+  font-size: 22px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: #fff;
+  margin-top: 30px;
+  cursor: pointer;
+  border: 1.5px solid red;
+  border-radius: 5px;
 }
 
-.Settings-Text3{
-    font-size: 20px;
-    margin-bottom: 0p;
-    color: #ffffff;
-    margin-top: -18px;
-    margin-bottom: 0px;
+.Settings-Right-button:hover {
+  background-color: transparent;
+  color: Red;
 }
 
-.Settings-Right-Div2{
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 40px;
+.Settings-Text3 {
+  font-size: 20px;
+  margin-bottom: 0p;
+  color: #ffffff;
+  margin-top: -18px;
+  margin-bottom: 0px;
 }
 
-.Settings-Right-Link{
-    color: #0493a9;
-    text-decoration: none;
+.Settings-Right-Div2 {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
 }
 
-.Settings-Right-Link:hover{
-    color: red;
+.Settings-Right-Link {
+  color: #0493a9;
+  text-decoration: none;
 }
+
+.Settings-Right-Link:hover {
+  color: red;
+}
+
+.Settings-Text4{
+    display: none;
+}
+
+.Settings-Right-Box2{
+    display: none;
+    margin-top: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 1000px) {
+  .Settings-Right-Div {
+    width: 90%;
+  }
+  .Settings-Right-Div2 {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    .Settings-Left {
+        display: none;
+    }
+    .Settings-Right {
+        width: 100%;
+      }
+      .Settings-Text4{
+        display: block;
+        opacity: .7;
+        margin-bottom: 0px;
+    }
+    .Settings-Text2 {
+        font-size: 18px;
+      }
+      .Settings-Input {
+        margin-top: -15px;
+        height: 30px;
+        width: 95%;
+      }
+      
+      .Settings-Right-button {
+        height: 35px;
+        font-size: 18px;
+      }
+      .Settings-Right-Box2{
+        
+      display: flex;
+      }
+}
+

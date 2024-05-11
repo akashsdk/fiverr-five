@@ -59,6 +59,7 @@ export default function Settings() {
           <div className="Settings-Right">
             {page === 1 ? (
               <div className="Settings-Right-Box">
+                <p className="Settings-Text4">/settings /account-info</p>
                 <div className="Settings-Right-Div">
                   <p className="Settings-Text2">Name:</p>
                   <input placeholder="" className="Settings-Input" />
@@ -76,6 +77,43 @@ export default function Settings() {
 
                 <div className="Settings-Right-Div">
                   <button className="Settings-Right-button">Update</button>
+                </div>
+
+                <div className="Settings-Right-Box2">
+                  <p className="Settings-Text4">/settings /profile</p>
+                  <div className="Settings-Right-Div">
+                    <p className="Settings-Text2">User ID:</p>
+                    <p className="Settings-Text3">2356789</p>
+                  </div>
+
+                  <div className="Settings-Right-Div">
+                    <p className="Settings-Text2">Name:</p>
+                    <p className="Settings-Text3">Mr. Xyz</p>
+                  </div>
+
+                  <div className="Settings-Right-Div">
+                    <p className="Settings-Text2">Email:</p>
+                    <p className="Settings-Text3">xyz@gmail.com</p>
+                  </div>
+
+                  <div className="Settings-Right-Div">
+                    <p className="Settings-Text2">Phone:</p>
+                    <p className="Settings-Text3">12345678900</p>
+                  </div>
+
+                  <div className="Settings-Right-Div2">
+                    <Link to="/login" className="Settings-Right-Link">
+                      <LoginOutlined /> Lon In
+                    </Link>
+
+                    <Link to="/profile" className="Settings-Right-Link">
+                      <EditOutlined /> Edit Profile
+                    </Link>
+
+                    <Link to="/signin" className="Settings-Right-Link">
+                      <UserAddOutlined /> Sign In
+                    </Link>
+                  </div>
                 </div>
               </div>
             ) : page === 2 ? (
