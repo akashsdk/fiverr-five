@@ -100,3 +100,28 @@
     background-color: transparent;
     color: Red;
 }
+
+.Settings-Text3{
+    font-size: 20px;
+    margin-bottom: 0p;
+    color: #ffffff;
+    margin-top: -18px;
+    margin-bottom: 0px;
+}
+
+.Settings-Right-Div2{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.Settings-Right-Link{
+    color: #0493a9;
+    text-decoration: none;
+}
+
+.Settings-Right-Link:hover{
+    color: red;
+}
