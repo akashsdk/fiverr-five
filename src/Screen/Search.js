@@ -14,19 +14,15 @@ export default function Search() {
 
   // Search
   const [searchQuery, setSearchQuery] = useState("");
-  const [showAdvancedSearch, setShowAdvancedSearch] = useState(false);
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
 
-  const toggleAdvancedSearch = () => {
-    setShowAdvancedSearch(!showAdvancedSearch);
-  };
+  
 
   const cancelSearch = () => {
     setSearchQuery("");
-    setShowAdvancedSearch(false);
   };
 
   return (
@@ -50,15 +46,8 @@ export default function Search() {
                   <CloseOutlined />
                 </button>
               )}
-              <button onClick={toggleAdvancedSearch} className="Search-Advanced-Button">
-                Advanced Search
-              </button>
             </div>
-            {showAdvancedSearch && (
-              <div className="Advanced-Search-Options">
-                {/* Add advanced search options here */}
-              </div>
-            )}
+            
           </div>
         </div>
         <Footer />
