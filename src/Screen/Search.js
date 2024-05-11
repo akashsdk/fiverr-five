@@ -10,7 +10,7 @@ export default function Search() {
   // Buck-Button
   const goBack = () => {
     window.history.back();
-  }
+  };
 
   // Search
   const [searchQuery, setSearchQuery] = useState("");
@@ -18,8 +18,6 @@ export default function Search() {
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
-
-  
 
   const cancelSearch = () => {
     setSearchQuery("");
@@ -32,7 +30,7 @@ export default function Search() {
         <div className="Search-Body">
           <div className="Search-Box">
             <button onClick={goBack} className="Search-Back-Button">
-              <LeftOutlined className="Search-Back-Icon"/>
+              <LeftOutlined className="Search-Back-Icon" />
             </button>
             <div className="Search-Div">
               <input
@@ -47,7 +45,6 @@ export default function Search() {
                 </button>
               )}
             </div>
-            
           </div>
         </div>
         <Footer />
