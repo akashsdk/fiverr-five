@@ -48,7 +48,7 @@
 }
 /* Right-Side */
 .Settings-Right {
-  height: auto;
+  height: calc(100vh - 100px);
   width: 70%;
 }
 .Settings-Right-Box {
@@ -94,11 +94,11 @@
   cursor: pointer;
   border: 1.5px solid red;
   border-radius: 5px;
+  opacity: 0.7;
 }
 
 .Settings-Right-button:hover {
-  background-color: transparent;
-  color: Red;
+  opacity: 1;
 }
 
 .Settings-Text3 {
@@ -126,13 +126,13 @@
   color: red;
 }
 
-.Settings-Text4{
-    display: none;
+.Settings-Text4 {
+  display: none;
 }
 
-.Settings-Right-Box2{
-    display: none;
-    margin-top: 20px;
+.Settings-Right-Box2 {
+  display: none;
+  margin-top: 20px;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -140,6 +140,9 @@
 }
 
 @media only screen and (max-width: 1000px) {
+  .Settings-Right {
+    height: auto;
+  }
   .Settings-Right-Div {
     width: 90%;
   }
@@ -149,33 +152,31 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .Settings-Left {
-        display: none;
-    }
-    .Settings-Right {
-        width: 100%;
-      }
-      .Settings-Text4{
-        display: block;
-        opacity: .7;
-        margin-bottom: 0px;
-    }
-    .Settings-Text2 {
-        font-size: 18px;
-      }
-      .Settings-Input {
-        margin-top: -15px;
-        height: 30px;
-        width: 95%;
-      }
-      
-      .Settings-Right-button {
-        height: 35px;
-        font-size: 18px;
-      }
-      .Settings-Right-Box2{
-        
-      display: flex;
-      }
-}
+  .Settings-Left {
+    display: none;
+  }
+  .Settings-Right {
+    width: 100%;
+  }
+  .Settings-Text4 {
+    display: block;
+    opacity: 0.7;
+    margin-bottom: 0px;
+  }
+  .Settings-Text2 {
+    font-size: 18px;
+  }
+  .Settings-Input {
+    margin-top: -15px;
+    height: 30px;
+    width: 95%;
+  }
 
+  .Settings-Right-button {
+    height: 35px;
+    font-size: 18px;
+  }
+  .Settings-Right-Box2 {
+    display: flex;
+  }
+}

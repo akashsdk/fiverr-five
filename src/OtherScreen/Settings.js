@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Settings.css";
 
 import Header from "../Components/Header";
@@ -12,6 +12,20 @@ import {
 
 export default function Settings() {
   const [page, setPage] = useState(1);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setPage(window.innerWidth <= 600 ? 1 : 1);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div className="body">
       <Header />
