@@ -43,7 +43,7 @@ export default function Search() {
                 className="Search-Input-Search"
                 value={searchQuery}
                 onChange={handleSearchChange}
-                placeholder="Search..."
+                placeholder="Search shows, movies, artists, etc"
               />
               {searchQuery && (
                 <button onClick={cancelSearch} className="Search-Cancel-Button">

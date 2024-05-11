@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 2px solid azure;
   }
   
   .Search-Back-Button {
@@ -16,6 +17,7 @@
     background-color: transparent;
     color: azure;
     cursor: pointer;
+    
   }
   
   .Search-Back-Icon {
@@ -24,23 +26,34 @@
   
   .Search-Div {
     height: auto;
-    width: 95%;
+    width: 90%;
+    margin-top: 20px;
   }
   
   .Search-Input-Search {
     height: 60px;
-    width: 90%;
+    width: 97%;
+    background-color: transparent;
+    color: #f9f9f9;
+    border: none;
+    padding: 0px;
+    outline: none;
+    font-size: 22px;
+
   }
   
   .Search-Cancel-Button {
+    position: absolute;
     border: none;
     background-color: transparent;
     color: #ccc;
     cursor: pointer;
+    font-size: 25px;
+    margin-top: 18px;
+    margin-left: 10px;
   }
-  
   .Search-Cancel-Button:hover {
-    color: #666;
+    color: #ffffff;
   }
   
   .Search-Advanced-Button {
