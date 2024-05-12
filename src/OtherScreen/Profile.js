@@ -9,7 +9,7 @@ export default function Profile() {
     <div className="body">
     <Header />
     <div className="box">
-    Profile
+    Profile ojojojojoj
       <Footer />
     </div>
   </div>
