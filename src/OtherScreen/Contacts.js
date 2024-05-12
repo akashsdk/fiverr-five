@@ -1,20 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contacts.css";
 
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 
-import { notification } from 'antd';
+import { notification } from "antd";
 
 export default function Contacts() {
   const [api, contextHolder] = notification.useNotification();
-  const openNotificationWithIcon = (type) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [other, setOther] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const openNotificationWithIcon = (type, message, description) => {
     api[type]({
-      message: 'Notification Title',
-      description:
-        'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
+      message: message,
+      description: description,
     });
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (name && email && message) {
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+        openNotificationWithIcon(
+          "success",
+          "Success",
+          "Your message has been sent successfully."
+        );
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+        setOther("");
+      }, 1000);
+    } else {
+      openNotificationWithIcon(
+        "warning",
+        "Warning",
+        "Please fill in all required fields."
+      );
+    }
+  };
+
   return (
     <div className="body">
       {contextHolder}
@@ -29,13 +62,39 @@ export default function Contacts() {
           </div>
           <div className="Contacts-Form">
             <h2>Send us a message</h2>
-            <form>
-              <input type="text" placeholder="Name*" />
-              <input type="email" placeholder="Email*" />
-              <input type="phone" placeholder="Phone" />
-              <textarea placeholder="Message*"></textarea>
-              <input type="text" placeholder="Other's" />
-              <button type="submit" onClick={() => openNotificationWithIcon('success')}>Send</button>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="Name*"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+              <input
+                type="email"
+                placeholder="Email*"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <input
+                type="phone"
+                placeholder="Phone"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
+              <textarea
+                placeholder="Message*"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              ></textarea>
+              <input
+                type="text"
+                placeholder="Other's"
+                value={other}
+                onChange={(e) => setOther(e.target.value)}
+              />
+              <button type="submit" disabled={loading}>
+                {loading ? "Sending..." : "Send"}
+              </button>
             </form>
           </div>
         </div>
