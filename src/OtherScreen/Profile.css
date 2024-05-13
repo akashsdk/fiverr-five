@@ -1,19 +1,66 @@
 .Profile-Body{
-    height: calc(100vh - 58px);
+    height: calc(100vh );
     width: 100%;
-    background-color: rgb(141, 163, 163);
+    background-color: #000000;
     
 }
 .Profile-Top-Box{
     height: 50vh;
     width: 100%;
-    background-color: rgb(255, 168, 168);
+    background-color: #008195;
 }
 .Profile-Box{
     position: relative;
-    height: calc(100vh - 58px);
+    height: 700px;
     width: 70%;
-    background-color: aquamarine;
-    margin-left: 15%;
     background-color: transparent;
+    margin-left: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.Profile-Div{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+    background-color: black;
+    box-shadow: #000000 0px 1px 4px, #fff 0px 0px 0px 3px;
+    margin-top: -430px;
+}
+.Profile-Div2{
+    height: 450px;
+    width: 100%;
+    background-color: black;
+    border-radius: 20px;
+    box-shadow: red 0px 1px 4px, red 0px 0px 0px 3px;
+}
+.Profile-Img1{
+    height: 150px;
+    width: 150px;
+    border-radius: 75px
+}
+.Profile-Div-Top{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.Profile-Div-Link{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.Profile-Div-Bottom{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
