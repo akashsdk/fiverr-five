@@ -7,7 +7,11 @@ import Footer from "../Components/Footer";
 import Img1 from "../Img/profile-icon.jpeg";
 
 import { Link } from "react-router-dom";
-import { MessageOutlined, SettingOutlined } from "@ant-design/icons";
+import {
+  MessageOutlined,
+  SettingOutlined,
+  PaperClipOutlined,
+} from "@ant-design/icons";
 
 export default function Profile() {
   return (
@@ -34,10 +38,15 @@ export default function Profile() {
                 </div>
 
                 <div className="Profile-Div-Bottom">
-                  <p>Your Good Name</p>
-                  <p>Your Address</p>
-                  <p>Your Email Address</p>
-                  <p>Your Phone Number</p>
+                  <p className="Profile-Div-Text1">Your Good Name</p>
+                  <p className="Profile-Div-Text2">Your Address</p>
+                  <p className="Profile-Div-Text3">Your Email Address</p>
+                  <p className="Profile-Div-Text3">Your Phone Number</p>
+
+                  <button className="Profile-Div-Button">
+                    <PaperClipOutlined />
+                    Edit
+                  </button>
                 </div>
               </div>
             </div>
