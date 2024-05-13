@@ -1,0 +1,19 @@
+.Profile-Body{
+    height: calc(100vh - 58px);
+    width: 100%;
+    background-color: rgb(141, 163, 163);
+    
+}
+.Profile-Top-Box{
+    height: 50vh;
+    width: 100%;
+    background-color: rgb(255, 168, 168);
+}
+.Profile-Box{
+    position: relative;
+    height: calc(100vh - 58px);
+    width: 70%;
+    background-color: aquamarine;
+    margin-left: 15%;
+    background-color: transparent;
+}
